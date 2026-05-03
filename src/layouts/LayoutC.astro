@@ -1,0 +1,54 @@
+---
+import "../styles/variant-c.css";
+import VariantNav from "../components/VariantNav.astro";
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = "Iarandu — variante C (Bulcão)",
+  description = "Construímos a camada de IA e dados que as áreas de negócio das empresas precisam — em parceria com a TI delas, sem entrar na fila delas.",
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="pt-BR" class="variant-c">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <meta name="generator" content={Astro.generator} />
+
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,500;0,6..96,700;0,6..96,800;1,6..96,500;1,6..96,700&family=Public+Sans:wght@400;500;600&display=swap"
+    />
+
+    <title>{title}</title>
+  </head>
+  <body>
+    <VariantNav current="c" />
+    <slot />
+
+    <script>
+      const io = new IntersectionObserver(
+        (entries) => {
+          for (const entry of entries) {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("is-in");
+              io.unobserve(entry.target);
+            }
+          }
+        },
+        { threshold: 0.12, rootMargin: "0px 0px -8% 0px" },
+      );
+      document.querySelectorAll(".c-reveal").forEach((el) => io.observe(el));
+    </script>
+  </body>
+</html>

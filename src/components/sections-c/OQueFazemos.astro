@@ -1,0 +1,46 @@
+---
+const verbos = [
+  {
+    v: "Modernizamos",
+    d: "Stack legado vira camada de dados auditável. Process mining, qualidade dos dados, integração com fornecedores.",
+  },
+  {
+    v: "Implementamos",
+    d: "Projetos fechados na plataforma do cliente, ou AI as a Service na nossa infraestrutura. Camada semântica, agentes, IA pontual.",
+  },
+  {
+    v: "Treinamos",
+    d: "Time da área de negócio aprende a operar a camada que a Iarandu construiu. Adoção em escala.",
+  },
+];
+---
+
+<section class="c-tile c-tile-papel c-pad" aria-labelledby="c-fazemos">
+  <div class="c-container">
+    <p class="c-label c-reveal" style="opacity: 0.55;">o que fazemos</p>
+
+    <h2
+      id="c-fazemos"
+      class="c-display-xl c-reveal"
+      style="margin-top: 32px; max-width: 18ch;"
+    >
+      Três <span class="c-display-italic" style="color: var(--c-urucum);">verbos</span>.
+    </h2>
+
+    <ol style="margin-top: 96px; display: grid; grid-template-columns: repeat(12, 1fr); gap: 32px;">
+      {
+        verbos.map((item, i) => (
+          <li
+            class="c-reveal"
+            style={`grid-column: ${i === 0 ? "1 / span 6" : i === 1 ? "7 / span 6" : "1 / span 8"}; margin-top: ${i === 2 ? "48px" : "0"}; transition-delay: ${i * 140}ms;`}
+          >
+            <h3 class="c-display-lg">{item.v}</h3>
+            <p class="c-body-lg" style="margin-top: 20px; max-width: 50ch; opacity: 0.78;">
+              {item.d}
+            </p>
+          </li>
+        ))
+      }
+    </ol>
+  </div>
+</section>

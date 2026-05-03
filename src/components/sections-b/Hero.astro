@@ -1,0 +1,63 @@
+---
+import Logo from "../Logo.astro";
+
+const facts = [
+  { k: "Sócios", v: "3" },
+  { k: "Time", v: "30 perfis" },
+  { k: "Clientes ativos", v: "3" },
+  { k: "Sedes", v: "São Paulo · Milano" },
+];
+---
+
+<section class="b-section b-rules" style="border-top: 0; padding-top: 56px;" aria-labelledby="b-hero">
+  <div class="b-container">
+    <header class="b-grid" style="margin-bottom: 96px; align-items: center;">
+      <a
+        href="#topo"
+        id="topo"
+        aria-label="Iarandu"
+        style="grid-column: span 4; color: var(--b-ink); display: inline-flex;"
+      >
+        <Logo variant="full" width={150} />
+      </a>
+      <div style="grid-column: span 4 / -1; display: flex; justify-content: flex-end; gap: 32px;" class="b-label">
+        <a href="#b-vamos" class="b-link" style="border-color: transparent;">vamos.</a>
+      </div>
+    </header>
+
+    <div class="b-grid">
+      <p class="b-label b-reveal" style="grid-column: span 12;">§00 — iarandu.tech</p>
+
+      <h1 id="b-hero" class="b-display-xxl b-reveal" style="grid-column: 1 / span 12; margin-top: 24px;">
+        construímos a camada de ia que sua área de negócio precisa, sem entrar na fila da ti.
+      </h1>
+
+      <div
+        class="b-reveal"
+        style="grid-column: 1 / span 7; margin-top: 56px; transition-delay: 200ms;"
+      >
+        <p class="b-body-lg" style="max-width: 56ch;">
+          Em parceria com a TI da empresa. Seguindo os padrões dela. Saímos do
+          orçamento da área de negócio.
+        </p>
+        <a href="#b-vamos" class="b-link b-body-lg" style="display: inline-block; margin-top: 32px; color: var(--b-urucum); border-color: var(--b-urucum);">
+          → começar pelo diagnóstico
+        </a>
+      </div>
+
+      <dl
+        class="b-reveal"
+        style="grid-column: 9 / span 4; margin-top: 56px; display: grid; grid-template-columns: 1fr; gap: 16px; transition-delay: 300ms;"
+      >
+        {
+          facts.map((f) => (
+            <div style="display: grid; grid-template-columns: 1fr auto; gap: 16px; align-items: baseline; padding: 12px 0; border-top: 1px solid var(--b-line);">
+              <dt class="b-label">{f.k}</dt>
+              <dd class="b-h3 b-num">{f.v}</dd>
+            </div>
+          ))
+        }
+      </dl>
+    </div>
+  </div>
+</section>

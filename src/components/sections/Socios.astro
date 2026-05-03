@@ -1,0 +1,120 @@
+---
+// Section 8 — surface-1. Headline: team of 30+ professionals, not all human.
+// Background: scattered constellation of role names — humans in branco-papel,
+// AI roles in italic accent-azul. Single-execution reveal on viewport entry.
+// Foreground: the three founders sit on top.
+const socios = [
+  {
+    nome: "Eduardo Campos",
+    apelido: "Duda",
+    papel: "Produtos digitais",
+    bio: "Mercado Libre, Coca-Cola, Centauro. À frente da jornada de IA da TOTVS dentro da Iarandu.",
+    linkedin: "https://www.linkedin.com/in/",
+  },
+  {
+    nome: "Mauro Resende",
+    papel: "Tecnologia & infraestrutura em nuvem",
+    bio: "+10 anos no Google Cloud LATAM. CTO de startups brasileiras antes da Iarandu.",
+    linkedin: "https://www.linkedin.com/in/",
+  },
+  {
+    nome: "Erlon Rachi",
+    papel: "Inteligência artificial & dados",
+    bio: "Carreira em Ford Motor, Kaizen Gaming, CI&T. Sediado em Milão.",
+    linkedin: "https://www.linkedin.com/in/",
+  },
+];
+
+// Constellation of roles. Mix of human + AI; positions hand-tuned to ring the
+// foreground card area without crowding the headline or footer.
+type Role = {
+  text: string;
+  top: string;
+  left: string;
+  size: number;
+  alpha: number;
+  rotate?: number;
+  ai?: boolean;
+};
+
+const roles: Role[] = [
+  { text: "desenvolvedores de software", top: "4%",  left: "5%",  size: 14, alpha: 0.36 },
+  { text: "Claude",                       top: "7%",  left: "34%", size: 17, alpha: 0.5,  ai: true },
+  { text: "matemático",                   top: "11%", left: "60%", size: 13, alpha: 0.3 },
+  { text: "agente de IA",                 top: "5%",  left: "80%", size: 14, alpha: 0.46, ai: true },
+  { text: "modelo de linguagem",          top: "17%", left: "10%", size: 12, alpha: 0.34, ai: true },
+  { text: "produtos digitais",            top: "16%", left: "44%", size: 13, alpha: 0.34 },
+  { text: "Claude Code",                  top: "23%", left: "82%", size: 12, alpha: 0.42, ai: true },
+  { text: "marketing",                    top: "22%", left: "62%", size: 12, alpha: 0.28 },
+
+  { text: "executivo",                    top: "37%", left: "1%",  size: 12, alpha: 0.26 },
+  { text: "designer de processos",        top: "44%", left: "3%",  size: 12, alpha: 0.32, rotate: -2 },
+  { text: "RAG retriever",                top: "52%", left: "1%",  size: 11, alpha: 0.34, ai: true },
+  { text: "QA engineer",                  top: "60%", left: "4%",  size: 11, alpha: 0.26 },
+  { text: "agente autônomo",              top: "68%", left: "2%",  size: 12, alpha: 0.36, ai: true },
+
+  { text: "vendas",                       top: "39%", left: "92%", size: 11, alpha: 0.26 },
+  { text: "engenheiro de IA",             top: "47%", left: "85%", size: 12, alpha: 0.4,  ai: true },
+  { text: "cientista de dados",           top: "55%", left: "88%", size: 13, alpha: 0.32 },
+  { text: "GPT-4",                        top: "64%", left: "92%", size: 14, alpha: 0.42, ai: true },
+  { text: "arquiteto de soluções",        top: "72%", left: "82%", size: 11, alpha: 0.3 },
+
+  { text: "code assistant",               top: "82%", left: "8%",  size: 12, alpha: 0.4,  ai: true },
+  { text: "consultor",                    top: "86%", left: "30%", size: 11, alpha: 0.26 },
+  { text: "programador",                  top: "90%", left: "52%", size: 13, alpha: 0.32 },
+  { text: "DevOps engineer",              top: "84%", left: "74%", size: 11, alpha: 0.28 },
+  { text: "web designer",                 top: "92%", left: "84%", size: 12, alpha: 0.3 },
+  { text: "model orchestrator",           top: "88%", left: "62%", size: 11, alpha: 0.36, ai: true },
+];
+---
+
+<section class="surface-1 section-pad" aria-labelledby="socios-title" style="position: relative; isolation: isolate;">
+  <div class="role-cloud" aria-hidden="true">
+    {
+      roles.map((r, i) => (
+        <span
+          class={r.ai ? "role-word role-ai" : "role-word"}
+          style={`top: ${r.top}; left: ${r.left}; font-size: ${r.size}px; --i: ${i}; --alpha: ${r.alpha}; --dx: ${r.ai ? "-6px" : "6px"}; ${r.rotate ? `transform: translateY(10px) rotate(${r.rotate}deg);` : ""}`}
+        >
+          {r.text}
+        </span>
+      ))
+    }
+  </div>
+
+  <div class="container-editorial" style="position: relative; z-index: 1;">
+    <h2 id="socios-title" class="display-md reveal measure-manifesto">
+      Mais de <span class="accent-azul">trinta</span> perfis. <span style="display: block;">Nem todos humanos.</span>
+    </h2>
+
+    <p class="reveal mt-[32px] body-lg measure-tight" style="transition-delay: 200ms;">
+      AI-native por construção, não por reposicionamento. Origens humanas: CI&amp;T, Google, USP, Unicamp.
+    </p>
+
+    <hr class="divider mt-[64px] md:mt-[88px]" />
+
+    <ul class="mt-[64px] md:mt-[88px] grid grid-cols-1 md:grid-cols-3 gap-[40px] md:gap-[56px]">
+      {
+        socios.map((s, i) => (
+          <li class="reveal" style={`transition-delay: ${i * 120}ms`}>
+            <div
+              class="aspect-[4/5] w-full"
+              style="background: var(--azul-nanquim-deep); background-image: linear-gradient(180deg, rgba(241,236,224,0.08) 0%, rgba(241,236,224,0.02) 100%); border: 1px solid var(--linha-papel);"
+              aria-hidden="true"
+            />
+            <p class="mt-[20px] body-sm" style="letter-spacing: 0.04em; text-transform: uppercase;">
+              {s.papel}
+            </p>
+            <h3 class="mt-[6px] h3" style="font-weight: 600;">
+              {s.apelido ? `${s.nome} · "${s.apelido}"` : s.nome}
+            </h3>
+            <p class="mt-[16px] body">{s.bio}</p>
+            <p class="mt-[16px] body-sm">
+              <a class="link-editorial" href={s.linkedin} target="_blank" rel="noopener">LinkedIn</a>
+            </p>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</section>

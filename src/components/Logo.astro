@@ -1,0 +1,73 @@
+---
+interface Props {
+  variant?: "full" | "mark";
+  width?: number | string;
+  ariaLabel?: string;
+  class?: string;
+  animate?: boolean;
+}
+
+const {
+  variant = "full",
+  width = variant === "full" ? 200 : 40,
+  ariaLabel = variant === "full" ? "iarandu." : "iarandu mark",
+  class: className = "",
+  animate = false,
+} = Astro.props;
+
+const cls = `${animate ? "logo-bloom " : ""}${className}`.trim();
+---
+
+{
+  variant === "full" ? (
+    <svg
+      viewBox="0 0 760 200"
+      xmlns="http://www.w3.org/2000/svg"
+      role="img"
+      aria-label={ariaLabel}
+      width={width}
+      class={cls}
+    >
+      <title>{ariaLabel}</title>
+      <style>{`
+        .iarandu-wordmark {
+          font-family: 'Fraunces', Georgia, serif;
+          font-weight: 700;
+          font-size: 130px;
+          font-variation-settings: 'opsz' 144, 'SOFT' 30;
+          letter-spacing: -0.015em;
+        }
+      `}</style>
+      <g transform="translate(105, 100)">
+        <ellipse class="orbit orbit-1" pathLength="100" rx="72" ry="22" fill="none" stroke="currentColor" stroke-width="3" transform="rotate(-30)" />
+        <ellipse class="orbit orbit-2" pathLength="100" rx="72" ry="22" fill="none" stroke="currentColor" stroke-width="3" />
+        <ellipse class="orbit orbit-3" pathLength="100" rx="72" ry="22" fill="none" stroke="currentColor" stroke-width="3" transform="rotate(30)" />
+        <circle class="nucleus" cx="0" cy="0" r="3.5" fill="currentColor" />
+        <circle class="planet" cx="62.35" cy="-36" r="10" fill="#C25E3A" />
+      </g>
+      <g class="wordmark-group">
+        <text x="220" y="148" class="iarandu-wordmark" fill="currentColor">ıarandu</text>
+      </g>
+      <circle class="tittle" cx="240" cy="58" r="10" fill="#C25E3A" />
+      <circle class="period" cx="615" cy="145" r="10" fill="#C25E3A" />
+    </svg>
+  ) : (
+    <svg
+      viewBox="0 0 200 200"
+      xmlns="http://www.w3.org/2000/svg"
+      role="img"
+      aria-label={ariaLabel}
+      width={width}
+      class={cls}
+    >
+      <title>{ariaLabel}</title>
+      <g transform="translate(100, 100)">
+        <ellipse class="orbit orbit-1" pathLength="100" rx="72" ry="22" fill="none" stroke="currentColor" stroke-width="3" transform="rotate(-30)" />
+        <ellipse class="orbit orbit-2" pathLength="100" rx="72" ry="22" fill="none" stroke="currentColor" stroke-width="3" />
+        <ellipse class="orbit orbit-3" pathLength="100" rx="72" ry="22" fill="none" stroke="currentColor" stroke-width="3" transform="rotate(30)" />
+        <circle class="nucleus" cx="0" cy="0" r="3.5" fill="currentColor" />
+        <circle class="planet" cx="62.35" cy="-36" r="10" fill="#C25E3A" />
+      </g>
+    </svg>
+  )
+}

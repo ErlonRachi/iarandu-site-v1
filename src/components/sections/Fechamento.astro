@@ -1,0 +1,102 @@
+---
+// Section 10 — surface-4 (deepest). Keyword: "Amazonas" (urucum). CTA form.
+// River-flow horizontal curve drawn once on viewport entry. Persists, never loops.
+---
+
+<section id="vamos" class="surface-4 section-pad-loose has-ambient" aria-labelledby="fechamento-title">
+  <svg
+    class="ambient-curve"
+    viewBox="0 0 1600 900"
+    preserveAspectRatio="xMidYMax slice"
+    aria-hidden="true"
+    style="opacity: 0.22;"
+  >
+    <!-- River flowing from lower-left to upper-right, three layered curves. -->
+    <path
+      data-curve
+      d="M -100 720
+         C 220 720, 360 640, 540 560
+         S 880 360, 1080 300
+         S 1420 200, 1720 140"
+      stroke-width="1.25"
+    />
+    <path
+      data-curve
+      style="transition-delay: 480ms; opacity: 0.55;"
+      d="M -100 800
+         C 280 790, 460 700, 660 600
+         S 1020 380, 1240 320
+         S 1560 240, 1720 220"
+    />
+    <path
+      data-curve
+      style="transition-delay: 880ms; opacity: 0.4;"
+      d="M -100 660
+         C 200 660, 340 580, 520 480
+         S 880 280, 1100 230"
+    />
+  </svg>
+
+  <div class="container-narrow">
+    <h2 id="fechamento-title" class="display-xl measure-manifesto" data-words>
+      Somos como o Rio <span class="accent-urucum">Amazonas</span> correndo pro mar.
+    </h2>
+    <p class="reveal mt-[40px] md:mt-[56px] body-lg measure-tight" style="transition-delay: 200ms;">
+      Não dá para parar. Quer ver onde a sua área de negócio entra no curso?
+    </p>
+  </div>
+
+  <div class="container-narrow mt-[88px] md:mt-[144px]">
+    <form
+      class="reveal grid grid-cols-1 gap-[28px]"
+      method="get"
+      action="mailto:we@iarandu.tech"
+      enctype="text/plain"
+    >
+      <div>
+        <label for="nome" class="body-sm" style="letter-spacing: 0.04em; text-transform: uppercase; color: var(--ink-muted);">nome</label>
+        <input
+          id="nome"
+          name="nome"
+          type="text"
+          required
+          autocomplete="name"
+          class="mt-[10px] w-full"
+          style="background: transparent; border: 0; border-bottom: 1px solid var(--linha-papel); padding: 12px 0; font-size: 18px; color: var(--ink); outline: none;"
+        />
+      </div>
+      <div>
+        <label for="empresa" class="body-sm" style="letter-spacing: 0.04em; text-transform: uppercase; color: var(--ink-muted);">empresa</label>
+        <input
+          id="empresa"
+          name="empresa"
+          type="text"
+          required
+          autocomplete="organization"
+          class="mt-[10px] w-full"
+          style="background: transparent; border: 0; border-bottom: 1px solid var(--linha-papel); padding: 12px 0; font-size: 18px; color: var(--ink); outline: none;"
+        />
+      </div>
+      <div>
+        <label for="desafio" class="body-sm" style="letter-spacing: 0.04em; text-transform: uppercase; color: var(--ink-muted);">o desafio em uma frase</label>
+        <input
+          id="desafio"
+          name="desafio"
+          type="text"
+          required
+          maxlength="240"
+          class="mt-[10px] w-full"
+          style="background: transparent; border: 0; border-bottom: 1px solid var(--linha-papel); padding: 12px 0; font-size: 18px; color: var(--ink); outline: none;"
+        />
+      </div>
+
+      <div class="mt-[24px]">
+        <button type="submit" class="cta-primary">vamos.</button>
+      </div>
+    </form>
+
+    <p class="mt-[40px] body-sm">
+      Ou direto: <a class="link-editorial" href="mailto:we@iarandu.tech">we@iarandu.tech</a>
+    </p>
+  </div>
+</section>

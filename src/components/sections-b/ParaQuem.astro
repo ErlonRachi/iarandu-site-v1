@@ -1,0 +1,68 @@
+---
+const perfis = [
+  {
+    n: "A",
+    perfil: "Empresa em crescimento rápido",
+    descricao:
+      "Time pequeno, ambição grande, TI sem bandwidth. Precisa de uma banda extra de produção em IA, sem virar projeto interno.",
+  },
+  {
+    n: "B",
+    perfil: "Empresa de TI madura",
+    descricao:
+      "Padrões estabelecidos, pipelines de dados sólidos, mas a área de negócio está parada na fila. Entramos como parceiros táticos da TI.",
+  },
+  {
+    n: "C",
+    perfil: "Empresa com sistema legado",
+    descricao:
+      "ERP de 15 anos, planilhas de reconciliação, shadow IT por toda parte. Diagnóstico de maturidade, plano de modernização, camada de IA por cima.",
+  },
+];
+
+const areas = ["Operações", "Comercial", "RH", "Financeiro", "Implementação", "Fiscalização", "Atendimento"];
+---
+
+<section class="b-section b-surface-papel b-section-papel" aria-labelledby="b-paraquem">
+  <div class="b-container b-grid">
+    <header class="b-section-header" style="grid-column: 1 / -1; border-color: rgba(47, 64, 48, 0.18);">
+      <span class="b-section-num">§03</span>
+      <span class="b-label">para quem</span>
+    </header>
+
+    <h2 id="b-paraquem" class="b-display-lg b-reveal" style="grid-column: 1 / span 8;">
+      Três cenários típicos. O mesmo perfil humano do outro lado da mesa.
+    </h2>
+
+    <ol style="grid-column: 1 / -1; margin-top: 64px;">
+      {
+        perfis.map((p, i) => (
+          <li
+            class="b-reveal b-grid"
+            style={`grid-column: 1 / -1; padding: 32px 0; border-top: 1px solid rgba(47, 64, 48, 0.18); transition-delay: ${i * 100}ms;`}
+          >
+            <span class="b-section-num b-num" style="grid-column: 1 / span 1; color: rgba(47, 64, 48, 0.55);">
+              {p.n}
+            </span>
+            <h3 class="b-h2" style="grid-column: 2 / span 4;">
+              {p.perfil}
+            </h3>
+            <p class="b-body" style="grid-column: 6 / span 7; max-width: 60ch;">
+              {p.descricao}
+            </p>
+          </li>
+        ))
+      }
+    </ol>
+
+    <div
+      class="b-reveal"
+      style="grid-column: 1 / -1; margin-top: 64px; padding-top: 32px; border-top: 1px solid rgba(47, 64, 48, 0.18); display: grid; grid-template-columns: 1fr 3fr; gap: 32px;"
+    >
+      <p class="b-label">áreas atendidas</p>
+      <ul style="display: flex; flex-wrap: wrap; gap: 8px 24px; margin: 0;" class="b-body">
+        {areas.map((a) => <li>{a}</li>)}
+      </ul>
+    </div>
+  </div>
+</section>

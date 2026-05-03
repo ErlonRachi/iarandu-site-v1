@@ -1,0 +1,53 @@
+---
+const verbos = [
+  {
+    n: "01",
+    v: "Modernizamos",
+    d: "Stack legado vira camada de dados auditável. Process mining, qualidade dos dados, integração com fornecedores. Diagnóstico antes de proposta.",
+  },
+  {
+    n: "02",
+    v: "Implementamos",
+    d: "Projetos fechados na plataforma do cliente, ou AI as a Service na nossa infraestrutura. Camada semântica, agentes, IA pontual em processo.",
+  },
+  {
+    n: "03",
+    v: "Treinamos",
+    d: "Time da área de negócio aprende a operar a camada que a Iarandu construiu. Adoção em escala, não treinamento corporativo genérico.",
+  },
+];
+---
+
+<section class="b-section b-surface-deep" aria-labelledby="b-fazemos">
+  <div class="b-container b-grid">
+    <header class="b-section-header" style="grid-column: 1 / -1;">
+      <span class="b-section-num">§02</span>
+      <span class="b-label">o que fazemos</span>
+    </header>
+
+    <h2 id="b-fazemos" class="b-display-lg b-reveal" style="grid-column: 1 / span 8;">
+      Três verbos, na ordem em que entram em projeto.
+    </h2>
+
+    <ol style="grid-column: 1 / -1; margin-top: 64px; display: grid; grid-template-columns: 1fr; gap: 0;">
+      {
+        verbos.map((item, i) => (
+          <li
+            class="b-reveal b-grid"
+            style={`grid-column: 1 / -1; padding: 32px 0; border-top: 1px solid var(--b-line); transition-delay: ${i * 100}ms;`}
+          >
+            <span class="b-section-num b-num" style="grid-column: 1 / span 1;">
+              {item.n}
+            </span>
+            <h3 class="b-display-lg" style="grid-column: 2 / span 4;">
+              {item.v}
+            </h3>
+            <p class="b-body-lg" style="grid-column: 6 / span 7; max-width: 60ch;">
+              {item.d}
+            </p>
+          </li>
+        ))
+      }
+    </ol>
+  </div>
+</section>

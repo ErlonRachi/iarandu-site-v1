@@ -1,0 +1,74 @@
+---
+const perfis = [
+  {
+    perfil: "Crescimento rápido",
+    descricao: "Time pequeno, ambição grande, TI sem bandwidth. Banda extra de produção em IA.",
+    tile: "c-tile-papel-soft",
+  },
+  {
+    perfil: "TI madura",
+    descricao: "Padrões estabelecidos, pipelines sólidos, área de negócio na fila. Parceiros táticos da TI.",
+    tile: "c-tile-musgo",
+  },
+  {
+    perfil: "Sistema legado",
+    descricao: "ERP de 15 anos, planilhas de reconciliação, shadow IT. Diagnóstico, modernização, IA por cima.",
+    tile: "c-tile-papel-soft",
+  },
+];
+
+const areas = ["Operações", "Comercial", "RH", "Financeiro", "Implementação", "Fiscalização", "Atendimento"];
+---
+
+<section class="c-tile c-tile-papel-soft c-pad" aria-labelledby="c-paraquem">
+  <div class="c-container">
+    <div style="display: grid; grid-template-columns: repeat(12, 1fr); gap: 32px; align-items: end;">
+      <div style="grid-column: 1 / span 6;">
+        <p class="c-label c-reveal" style="opacity: 0.55;">para quem</p>
+        <h2 id="c-paraquem" class="c-display-xl c-reveal" style="margin-top: 32px;">
+          Três cenários.
+        </h2>
+      </div>
+      <p
+        class="c-body-lg c-reveal"
+        style="grid-column: 8 / span 5; max-width: 38ch; opacity: 0.78; transition-delay: 120ms;"
+      >
+        O mesmo perfil humano do outro lado da mesa, em três contextos
+        que repetem.
+      </p>
+    </div>
+
+    <ol
+      style="margin-top: 96px; display: grid; grid-template-columns: repeat(12, 1fr); gap: 8px;"
+    >
+      {
+        perfis.map((p, i) => (
+          <li
+            class={`c-reveal ${p.tile}`}
+            style={`grid-column: ${i === 1 ? "5 / span 4" : i === 0 ? "1 / span 4" : "9 / span 4"}; aspect-ratio: 1 / 1; padding: 32px; display: flex; flex-direction: column; justify-content: space-between; transition-delay: ${i * 140}ms;`}
+          >
+            <p class="c-label" style="opacity: 0.55;">0{i + 1}</p>
+            <div>
+              <h3 class="c-h2" style="font-family: 'Bodoni Moda', Georgia, serif; font-weight: 700; font-size: clamp(20px, 1.8vw, 26px); line-height: 1.1;">
+                {p.perfil}
+              </h3>
+              <p class="c-body-sm" style="margin-top: 16px; opacity: 0.85;">
+                {p.descricao}
+              </p>
+            </div>
+          </li>
+        ))
+      }
+    </ol>
+
+    <div
+      class="c-reveal"
+      style="margin-top: 88px; display: grid; grid-template-columns: 1fr 3fr; gap: 32px; align-items: baseline;"
+    >
+      <p class="c-label" style="opacity: 0.55;">áreas atendidas</p>
+      <ul style="display: flex; flex-wrap: wrap; gap: 12px 32px; margin: 0;" class="c-body">
+        {areas.map((a) => <li>{a}</li>)}
+      </ul>
+    </div>
+  </div>
+</section>

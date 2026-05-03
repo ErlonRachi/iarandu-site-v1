@@ -1,0 +1,20 @@
+---
+// Section 6 — surface-1. Tight rhythm. No keyword accent (list-only).
+const passagens = ["Nestlé", "Coca-Cola", "Google Cloud", "CI&T", "Mercado Libre", "Ford Motor"];
+---
+
+<section class="surface-1 section-pad-tight" aria-labelledby="trilha-title">
+  <div class="container-editorial">
+    <div class="grid grid-cols-1 md:grid-cols-[1fr_2fr] gap-[24px] md:gap-[64px] items-baseline">
+      <h2 id="trilha-title" class="reveal h3" style="color: var(--ink-muted); font-weight: 500;">
+        Onde os fundadores já estiveram.
+      </h2>
+      <ul
+        class="reveal flex flex-wrap items-baseline gap-x-[40px] gap-y-[16px]"
+        style="transition-delay: 120ms;"
+      >
+        {passagens.map((p) => <li class="display-sm">{p}</li>)}
+      </ul>
+    </div>
+  </div>
+</section>

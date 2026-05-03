@@ -1,0 +1,63 @@
+---
+const cases = [
+  {
+    descritor: "Software house brasileira",
+    setor: "ERP empresarial · líder nacional",
+    porte: ["+12.000 funcionários", "+70.000 clientes corporativos", "Capital aberto na B3"],
+    sumario: "IA na ordenação do fluxo comercial de desenvolvimento e implementação. Detecção de anomalias em mapeamento de especificações.",
+    tile: "c-tile-musgo",
+    span: "1 / span 7",
+  },
+  {
+    descritor: "Agência reguladora federal",
+    setor: "Estado brasileiro · setor crítico",
+    porte: ["+3.000 empresas reguladas", "Cobertura nacional", "Stack com +15 anos"],
+    sumario: "Diagnóstico do stack que sustenta licenciamento e fiscalização nacional. Plano de modernização e IA analítica.",
+    tile: "c-tile-papel",
+    span: "8 / span 5",
+  },
+  {
+    descritor: "HR tech em hipercrescimento",
+    setor: "Trabalho executivo fracionado · LATAM",
+    porte: ["Top 3 do mercado LATAM", "+4.000 clientes", "Crescimento projetado 20×"],
+    sumario: "Refazendo arquitetura para o próximo salto. Camada semântica e governança para adoção em escala dos produtos da Anthropic.",
+    tile: "c-tile-papel-soft",
+    span: "1 / span 12",
+  },
+];
+---
+
+<section class="c-tile c-tile-papel c-pad" aria-labelledby="c-cases">
+  <div class="c-container">
+    <div style="display: grid; grid-template-columns: repeat(12, 1fr); gap: 32px; align-items: end; margin-bottom: 96px;">
+      <p class="c-label c-reveal" style="grid-column: 1 / span 12; opacity: 0.55;">cases ativos</p>
+      <h2 id="c-cases" class="c-display-xl c-reveal" style="grid-column: 1 / span 9;">
+        Três clientes. <span class="c-display-italic" style="color: var(--c-urucum);">Descritos pelo porte</span>.
+      </h2>
+    </div>
+
+    <div style="display: grid; grid-template-columns: repeat(12, 1fr); gap: 24px;">
+      {
+        cases.map((c, i) => (
+          <article
+            class={`c-reveal ${c.tile}`}
+            style={`grid-column: ${c.span}; padding: 40px; min-height: 320px; display: flex; flex-direction: column; justify-content: space-between; transition-delay: ${i * 140}ms;`}
+          >
+            <header>
+              <h3 class="c-display-lg" style="font-size: clamp(24px, 2.6vw, 36px);">
+                {c.descritor}
+              </h3>
+              <p class="c-label" style="margin-top: 12px; opacity: 0.6;">{c.setor}</p>
+              <ul style="margin-top: 20px; display: grid; gap: 4px;" class="c-body-sm">
+                {c.porte.map((p) => <li>· {p}</li>)}
+              </ul>
+            </header>
+            <p class="c-body" style="margin-top: 32px; max-width: 56ch; opacity: 0.9;">
+              {c.sumario}
+            </p>
+          </article>
+        ))
+      }
+    </div>
+  </div>
+</section>

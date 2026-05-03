@@ -1,0 +1,73 @@
+---
+const socios = [
+  {
+    n: "01",
+    nome: "Eduardo Campos",
+    apelido: "Duda",
+    papel: "Produtos digitais",
+    bio: "Mercado Libre, Coca-Cola, Centauro. À frente da jornada de IA da TOTVS dentro da Iarandu.",
+    linkedin: "https://www.linkedin.com/in/",
+  },
+  {
+    n: "02",
+    nome: "Mauro Resende",
+    papel: "Tecnologia & infraestrutura em nuvem",
+    bio: "+10 anos no Google Cloud LATAM. CTO de startups brasileiras antes da Iarandu.",
+    linkedin: "https://www.linkedin.com/in/",
+  },
+  {
+    n: "03",
+    nome: "Erlon Rachi",
+    papel: "Inteligência artificial & dados",
+    bio: "Carreira em Ford Motor, Kaizen Gaming, CI&T. Sediado em Milão.",
+    linkedin: "https://www.linkedin.com/in/",
+  },
+];
+---
+
+<section class="b-section b-surface-papel b-section-papel" aria-labelledby="b-socios">
+  <div class="b-container b-grid">
+    <header class="b-section-header" style="grid-column: 1 / -1; border-color: rgba(47, 64, 48, 0.18);">
+      <span class="b-section-num">§07</span>
+      <span class="b-label">sócios</span>
+    </header>
+
+    <h2 id="b-socios" class="b-display-lg b-reveal" style="grid-column: 1 / span 8;">
+      Três sócios. Mais de trinta anos de experiência combinada.
+    </h2>
+
+    <ol style="grid-column: 1 / -1; margin-top: 64px;">
+      {
+        socios.map((s, i) => (
+          <li
+            class="b-reveal b-grid"
+            style={`grid-column: 1 / -1; padding: 36px 0; border-top: 1px solid rgba(47, 64, 48, 0.18); transition-delay: ${i * 100}ms;`}
+          >
+            <span class="b-section-num b-num" style="grid-column: 1 / span 1; color: rgba(47, 64, 48, 0.55);">
+              {s.n}
+            </span>
+            <header style="grid-column: 2 / span 4;">
+              <h3 class="b-h2">
+                {s.apelido ? `${s.nome} "${s.apelido}"` : s.nome}
+              </h3>
+              <p class="b-label" style="margin-top: 8px;">{s.papel}</p>
+            </header>
+            <p class="b-body" style="grid-column: 6 / span 5; max-width: 60ch;">
+              {s.bio}
+            </p>
+            <div style="grid-column: 11 / span 2; align-self: end;">
+              <a class="b-link b-body-sm" href={s.linkedin} target="_blank" rel="noopener">
+                LinkedIn ↗
+              </a>
+            </div>
+          </li>
+        ))
+      }
+    </ol>
+
+    <p class="b-body-sm b-reveal" style="grid-column: 1 / -1; margin-top: 56px;">
+      Time: 30 perfis profissionais, nem todos humanos. AI-native por
+      construção, não por reposicionamento. Origens: CI&amp;T, Google, USP, Unicamp.
+    </p>
+  </div>
+</section>

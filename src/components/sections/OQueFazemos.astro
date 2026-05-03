@@ -1,0 +1,44 @@
+---
+// Section 3 — surface-2 (lighter nanquim). Keyword: "Implementamos" (verde).
+const verbos = [
+  {
+    v: "Modernizamos",
+    accent: null,
+    d: "Stack legado vira camada de dados auditável. Process mining, qualidade dos dados, integração com fornecedores. Diagnóstico antes de proposta.",
+  },
+  {
+    v: "Implementamos",
+    accent: "verde",
+    d: "Projetos fechados na plataforma do cliente, ou AI as a Service na nossa infraestrutura. Camada semântica, agentes, IA pontual em processo.",
+  },
+  {
+    v: "Treinamos",
+    accent: null,
+    d: "Time da área de negócio aprende a operar a camada que a Iarandu construiu. Adoção em escala, não treinamento corporativo genérico.",
+  },
+];
+---
+
+<section class="surface-2 section-pad" aria-labelledby="fazemos-title">
+  <div class="container-editorial">
+    <h2 id="fazemos-title" class="h2 reveal measure">
+      O trabalho, na ordem em que ele acontece.
+    </h2>
+
+    <ol class="mt-[64px] md:mt-[88px] space-y-[40px] md:space-y-[56px]">
+      {
+        verbos.map((item, i) => (
+          <li
+            class="reveal grid grid-cols-1 md:grid-cols-[1fr_2fr] gap-[16px] md:gap-[64px] pt-[28px] rule"
+            style={`transition-delay: ${i * 120}ms`}
+          >
+            <div class={`display-sm ${item.accent === "verde" ? "accent-verde" : ""}`}>
+              {item.v}
+            </div>
+            <p class="body-lg measure-tight">{item.d}</p>
+          </li>
+        ))
+      }
+    </ol>
+  </div>
+</section>

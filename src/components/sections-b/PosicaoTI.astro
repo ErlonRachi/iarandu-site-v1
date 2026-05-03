@@ -1,0 +1,61 @@
+---
+const pilares = [
+  {
+    n: "01",
+    titulo: "Compliance",
+    descricao:
+      "Trabalhamos dentro do que a TI já definiu. Políticas de dados, perímetros, auditoria. Sem zonas cinza.",
+  },
+  {
+    n: "02",
+    titulo: "Segurança",
+    descricao:
+      "Identidade, segredo, log, isolamento. Sem credencial em planilha, sem chave em e-mail, sem ambiente fora do controle.",
+  },
+  {
+    n: "03",
+    titulo: "Integração total",
+    descricao:
+      "Padrões da TI, pipelines da TI, observabilidade da TI. Entregamos código e arquitetura que o time da casa mantém.",
+  },
+];
+---
+
+<section class="b-section b-surface-deep" aria-labelledby="b-posicao">
+  <div class="b-container b-grid">
+    <header class="b-section-header" style="grid-column: 1 / -1;">
+      <span class="b-section-num">§06</span>
+      <span class="b-label">posição em relação à ti</span>
+    </header>
+
+    <h2 id="b-posicao" class="b-display-xl b-reveal" style="grid-column: 1 / span 9;">
+      Aliados táticos. <span style="color: var(--b-urucum);">A banda extra</span> que o CTO gostaria de ter.
+    </h2>
+
+    <p class="b-body-lg b-reveal" style="grid-column: 1 / span 7; margin-top: 32px; transition-delay: 200ms;">
+      Saímos do orçamento da área de negócio, mas trabalhamos para a TI, com
+      os padrões da TI. Não competimos com o time da casa, destravamos.
+    </p>
+
+    <ol style="grid-column: 1 / -1; margin-top: 80px;">
+      {
+        pilares.map((p, i) => (
+          <li
+            class="b-reveal b-grid"
+            style={`grid-column: 1 / -1; padding: 28px 0; border-top: 1px solid var(--b-line); transition-delay: ${i * 100}ms;`}
+          >
+            <span class="b-section-num b-num" style="grid-column: 1 / span 1;">
+              {p.n}
+            </span>
+            <h3 class="b-h2" style="grid-column: 2 / span 3;">
+              {p.titulo}
+            </h3>
+            <p class="b-body" style="grid-column: 6 / span 7; max-width: 60ch;">
+              {p.descricao}
+            </p>
+          </li>
+        ))
+      }
+    </ol>
+  </div>
+</section>

@@ -1,0 +1,145 @@
+.  DECK INSTITUCIONAL · 2026
+
+   iarandu.
+ORIGEM DO NOME
+
+arandu.                     A Iarandu é a fusão entre IA e arandu .
+                            Nossas referências visuais são floresta, rio e
+                            nuvem; nossas formas seguem proporção
+                            áurea e curva logarítmica.
+                            Tecnologia, para nós, tem origem na natureza
+                            -- não na geometria fria do Vale do Silício.
+
+sabedoria, em tupi-guarani
+NOSSA TESE
+
+o limite da adoção de IA
+na empresa não é técnico.
+é organizacional.
+O PROBLEMA
+
+em quase toda empresa, há pessoas
+funcionando como APIs humanas
+entre sistemas que não conversam.
+
+Copiam dados de um lugar para outro, reconciliam     A TI raramente chega lá. Não porque não queira --
+planilhas, traduzem informação entre departamentos.  está priorizando, corretamente, o produto que gera
+Esse trabalho é invisível, é exaustivo, e é onde IA  receita. A fila é longa, e a área de negócio sempre fica
+pode entregar mais valor humano.                     para depois.
+O QUE FAZEMOS
+
+construímos a camada
+de IA que sua área de
+negócio precisa.
+
+01                                02                                03
+
+Modernizamos a camada de          Implementamos governança          Treinamos as pessoas.
+dados acionável.                  de IA.
+                                                                    Para tirar benefício da
+Sistemas legados conectados,      Sob os padrões da TI do cliente.  democratização de dados corretos,
+dado que bate, fim do copy-paste  Auditável, rastreável, dentro do  sem virar dependência da
+entre planilhas.                  perímetro da empresa.             consultoria.
+QUEM SERVIMOS
+
+empresas onde a área de negócio
+precisa de IA agora ...
+e há uma a fila de outras
+prioridades sobrecarregando a TI
+
+01 Empresas de crescimento rápido    Não foram desenhadas para serem AI-native. Hoje rodam à base de
+02 Organizações com TI madura        planilhas e shadow IT.
+03 Corporações com sistemas legados  O produto principal absorve toda a capacidade de desenvolvimento.
+
+                                     Precisam ser modernizadas para serem AI-ready.
+COMO ENTREGAMOS
+
+dois modelos, um sistema.
+
+01 · PROJETO FECHADO                                                  02 · AI AS A SERVICE
+
+Na plataforma do cliente.                                             Na nossa infraestrutura.
+
+Quando há padrão de TI maduro e o cliente quer ownership total da     Quando o cliente quer recorrência, velocidade, ou ainda não tem
+camada de IA. Cobramos por projeto. A relação se encerra na entrega.  padrão estabelecido. Importamos dados brutos, fornecemos camada
+                                                                      semântica e analítica, troca por APIs.
+E SEI O QUE É MELHOR PRA MIM?
+
+rodamos um assessement de sua
+maturidade em ia
+
+Diagnóstico orientado para resolução do  Mineração de procesos, qualidade dos seus dados,
+         seu problema de negócio         resiliência dos seus sistemas, integração com seus
+
+                                                                 fornecedores
+POSICIONAMENTO
+
+a TI do cliente é nossa
+
+referência.
+
+           01            02                                                           03
+
+Compliance     Segurança                                               Integração total
+
+Saímos do orçamento da área de negócio, mas trabalhamos para a TI --   É a IA que se ajusta ao seu negócio, não o contrário. Nosso papel é
+com os padrões dela, como capacidade produtiva dela. Aliados táticos.  garantir que seus processos, seus dados, sua governança e
+A banda extra de produção que o CTO gostaria de ter.                   infraestrutura encaixem
+QUEM SOMOS                                                 ORIGENS DO TIME    CI&T, Google, USP, Unicamp, e outras casas
+                                                                                                     onde dado e IA são ofício.
+somos AI-native por
+construção, não por                                        TRABALHOS PRÉVIOS  Os fundadores transformaram operações em
+reposicionamento.                                                                          Nestlé, Coca-Cola e Google Cloud.
+
+                                          um time de       ATUAÇÃO            Estados Unidos, América Latina, Europa.
+
+  30                                                                                  menos de
+                                     perfis profissionais                        1 ano de vida.
+                                    nem todos humanos.                        mais de 25 anos
+                                                                               de experiência.
+CASO · 01 DE 03
+
+ANSN
+
+Agência criada em 2025 para regular o uso de radioisótopos. [contexto
+a refinar com a diretoria]
+
+PROBLEMA   [narrativa a coletar -- diagnóstico do estado anterior]
+DECISÃO    [caminho escolhido, modelo comercial, escopo]
+RESULTADO  [entrega concreta, números, mudança operacional]
+
+10 / 13
+CASO · 02 DE 03
+
+Chiefs Group
+
+Comunidade de C-levels da América Latina. [contexto a confirmar com
+a CPTO]
+
+PROBLEMA   [narrativa a coletar -- diagnóstico do estado anterior]
+DECISÃO    [caminho escolhido, modelo comercial, escopo]
+RESULTADO  [entrega concreta, números, mudança operacional]
+
+11 / 13
+CASO · 03 DE 03
+
+TOTVS
+
+Maior empresa de software empresarial do Brasil. [contexto a confirmar
+com o diretor]
+
+PROBLEMA   [narrativa a coletar -- diagnóstico do estado anterior]
+DECISÃO    [caminho escolhido, modelo comercial, escopo]
+RESULTADO  [entrega concreta, números, mudança operacional]
+
+12 / 13
+somos como o
+Rio Amazonas correndo
+pro mar. trabalhamos
+com quem quer ir em
+frente.
+
+  vamos?
+
+                       contato@iarandu.com
+

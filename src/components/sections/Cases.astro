@@ -1,0 +1,76 @@
+---
+// Section 5 — surface-2. Keyword: "porte" (azul).
+// Clients described by porte/setor. Names only with written approval.
+const cases = [
+  {
+    descritor: "Software house brasileira",
+    setor: "ERP empresarial · líder de mercado nacional",
+    porte: ["+12.000 funcionários", "+70.000 clientes corporativos", "Capital aberto na B3"],
+    problema: "Mapeamento de especificações de desenvolvimento, em escala, sem detecção de anomalias.",
+    decisao: "IA na ordenação do fluxo comercial de desenvolvimento e implementação.",
+    status: "Em andamento.",
+    tone: "destaque",
+  },
+  {
+    descritor: "Agência reguladora federal",
+    setor: "Estado brasileiro · setor crítico",
+    porte: ["+3.000 empresas reguladas", "Cobertura nacional", "Stack tecnológico com +15 anos"],
+    problema: "Stack legado sustenta operação de licenciamento e fiscalização em todo o território nacional.",
+    decisao: "Diagnóstico completo, plano de modernização de dados, arquitetura em nuvem, IA analítica e pontual.",
+    status: "Plano entregue, modernização em curso.",
+    tone: "padrao",
+  },
+  {
+    descritor: "HR tech em hipercrescimento",
+    setor: "Trabalho executivo fracionado · LATAM",
+    porte: ["Top 3 do mercado LATAM", "+4.000 clientes", "Crescimento projetado de 20×"],
+    problema: "Arquitetura atual não comporta o próximo salto. Adoção em escala dos produtos da Anthropic exige governança.",
+    decisao: "Camada semântica, governança de IA, padrão interno de adoção.",
+    status: "Em implantação.",
+    tone: "padrao",
+  },
+];
+---
+
+<section class="surface-2 section-pad" aria-labelledby="cases-title">
+  <div class="container-editorial">
+    <h2 id="cases-title" class="h2 reveal measure">
+      Pelo <span class="accent-azul">porte</span>. O nome fica para a próxima conversa.
+    </h2>
+
+    <div class="mt-[64px] md:mt-[88px] space-y-[48px] md:space-y-[72px]">
+      {
+        cases.map((c, i) => (
+          <article
+            class="reveal grid grid-cols-1 md:grid-cols-[1fr_2fr] gap-[24px] md:gap-[64px] pt-[40px] rule"
+            style={`transition-delay: ${i * 120}ms`}
+          >
+            <header>
+              <h3 class={c.tone === "destaque" ? "display-sm" : "h3"}>{c.descritor}</h3>
+              <p class="mt-[8px] body-sm" style="letter-spacing: 0.04em; text-transform: uppercase;">
+                {c.setor}
+              </p>
+              <ul class="mt-[24px] space-y-[6px] body-sm">
+                {c.porte.map((p) => <li>· {p}</li>)}
+              </ul>
+            </header>
+            <div class="grid grid-cols-1 gap-[28px]">
+              <div>
+                <p class="body-sm" style="letter-spacing: 0.04em; text-transform: uppercase;">problema</p>
+                <p class="mt-[8px] body">{c.problema}</p>
+              </div>
+              <div>
+                <p class="body-sm" style="letter-spacing: 0.04em; text-transform: uppercase;">decisão</p>
+                <p class="mt-[8px] body">{c.decisao}</p>
+              </div>
+              <div>
+                <p class="body-sm" style="letter-spacing: 0.04em; text-transform: uppercase;">status</p>
+                <p class="mt-[8px] body-sm">{c.status}</p>
+              </div>
+            </div>
+          </article>
+        ))
+      }
+    </div>
+  </div>
+</section>

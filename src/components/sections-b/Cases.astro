@@ -1,0 +1,82 @@
+---
+const cases = [
+  {
+    n: "01",
+    descritor: "Software house brasileira",
+    setor: "ERP empresarial · líder nacional",
+    porte: ["+12.000 funcionários", "+70.000 clientes corporativos", "Capital aberto na B3"],
+    problema: "Mapeamento de especificações de desenvolvimento em escala, sem detecção de anomalias.",
+    decisao: "IA na ordenação do fluxo comercial de desenvolvimento e implementação.",
+    status: "em andamento",
+  },
+  {
+    n: "02",
+    descritor: "Agência reguladora federal",
+    setor: "Estado brasileiro · setor crítico",
+    porte: ["+3.000 empresas reguladas", "Cobertura nacional", "Stack com +15 anos"],
+    problema: "Stack legado sustenta licenciamento e fiscalização em todo o território nacional.",
+    decisao: "Diagnóstico completo, plano de modernização, IA analítica e pontual.",
+    status: "modernização em curso",
+  },
+  {
+    n: "03",
+    descritor: "HR tech em hipercrescimento",
+    setor: "Trabalho executivo fracionado · LATAM",
+    porte: ["Top 3 do mercado LATAM", "+4.000 clientes", "Crescimento projetado 20×"],
+    problema: "Arquitetura atual não comporta o próximo salto. Adoção dos produtos Anthropic exige governança.",
+    decisao: "Camada semântica, governança de IA, padrão interno de adoção.",
+    status: "em implantação",
+  },
+];
+---
+
+<section class="b-section" aria-labelledby="b-cases">
+  <div class="b-container b-grid">
+    <header class="b-section-header" style="grid-column: 1 / -1;">
+      <span class="b-section-num">§04</span>
+      <span class="b-label">cases ativos</span>
+    </header>
+
+    <h2 id="b-cases" class="b-display-lg b-reveal" style="grid-column: 1 / span 8;">
+      Três clientes. Descritos pelo porte, identificados sob acordo.
+    </h2>
+
+    <div style="grid-column: 1 / -1; margin-top: 64px;">
+      {
+        cases.map((c, i) => (
+          <article
+            class="b-reveal b-grid"
+            style={`grid-column: 1 / -1; padding: 40px 0; border-top: 1px solid var(--b-line); transition-delay: ${i * 100}ms;`}
+          >
+            <span class="b-section-num b-num" style="grid-column: 1 / span 1;">
+              {c.n}
+            </span>
+            <header style="grid-column: 2 / span 4;">
+              <h3 class="b-display-lg">{c.descritor}</h3>
+              <p class="b-label" style="margin-top: 8px;">{c.setor}</p>
+              <ul style="margin-top: 24px; display: grid; gap: 6px;" class="b-body-sm">
+                {c.porte.map((p) => <li>· {p}</li>)}
+              </ul>
+            </header>
+            <dl
+              style="grid-column: 6 / span 7; display: grid; grid-template-columns: 1fr; gap: 20px;"
+            >
+              <div style="display: grid; grid-template-columns: 100px 1fr; gap: 16px; align-items: baseline;">
+                <dt class="b-label">problema</dt>
+                <dd class="b-body">{c.problema}</dd>
+              </div>
+              <div style="display: grid; grid-template-columns: 100px 1fr; gap: 16px; align-items: baseline;">
+                <dt class="b-label">decisão</dt>
+                <dd class="b-body">{c.decisao}</dd>
+              </div>
+              <div style="display: grid; grid-template-columns: 100px 1fr; gap: 16px; align-items: baseline;">
+                <dt class="b-label">status</dt>
+                <dd class="b-body-sm">{c.status}</dd>
+              </div>
+            </dl>
+          </article>
+        ))
+      }
+    </div>
+  </div>
+</section>

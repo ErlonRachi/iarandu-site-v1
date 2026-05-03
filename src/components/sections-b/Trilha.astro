@@ -1,0 +1,29 @@
+---
+const passagens = ["Nestlé", "Coca-Cola", "Google Cloud", "CI&T", "Mercado Libre"];
+---
+
+<section class="b-section-tight" aria-labelledby="b-trilha" style="border-top: 1px solid var(--b-line);">
+  <div class="b-container b-grid">
+    <header class="b-section-header" style="grid-column: 1 / -1;">
+      <span class="b-section-num">§05</span>
+      <span class="b-label">trajetória</span>
+    </header>
+
+    <h2 id="b-trilha" class="b-h2 b-reveal" style="grid-column: 1 / span 4;">
+      Onde os fundadores já estiveram.
+    </h2>
+
+    <ul
+      class="b-reveal"
+      style="grid-column: 6 / -1; display: flex; flex-wrap: wrap; gap: 24px 56px; transition-delay: 120ms;"
+    >
+      {
+        passagens.map((p) => (
+          <li class="b-h2" style="color: var(--b-ink); opacity: 0.85;">
+            {p}
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</section>

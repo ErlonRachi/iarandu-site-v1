@@ -1,0 +1,36 @@
+---
+// Section 1 — Hero. Drenched azul-nanquim-deep. Keyword: "fila" (urucum).
+import Logo from "../Logo.astro";
+---
+
+<section class="surface-1 section-pad" aria-labelledby="hero-title">
+  <div class="container-editorial">
+    <header class="flex items-center justify-between mb-[88px] md:mb-[144px]">
+      <a
+        href="#topo"
+        id="topo"
+        aria-label="Iarandu — início"
+        style="color: var(--ink); display: inline-flex;"
+      >
+        <Logo variant="full" width={170} animate={true} />
+      </a>
+      <a href="#vamos" class="link-editorial" style="font-size: 14px; letter-spacing: 0.04em; text-transform: uppercase;">
+        vamos.
+      </a>
+    </header>
+
+    <h1 id="hero-title" class="display-xl" data-words style="max-width: 18ch;">
+      Construímos a camada de IA que sua área de negócio precisa, sem entrar na <span class="accent-urucum">fila</span> da TI.
+    </h1>
+
+    <div
+      class="reveal mt-[48px] md:mt-[64px] flex flex-col md:flex-row md:items-end md:justify-between gap-[40px]"
+      style="transition-delay: 200ms;"
+    >
+      <p class="body-lg measure-tight">
+        Em parceria com a TI da empresa. Seguindo os padrões dela. Saímos do orçamento da área de negócio.
+      </p>
+      <a href="#vamos" class="link-urucum body-lg" style="white-space: nowrap;">começar pelo diagnóstico →</a>
+    </div>
+  </div>
+</section>

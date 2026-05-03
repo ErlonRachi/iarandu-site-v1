@@ -1,0 +1,58 @@
+---
+// Section 4 — surface-1. Keyword: "humano" (urucum).
+const perfis = [
+  {
+    perfil: "Empresa em crescimento rápido",
+    descricao:
+      "Time pequeno, ambição grande, TI sem bandwidth. Precisa de uma banda extra de produção em IA, sem virar projeto interno.",
+  },
+  {
+    perfil: "Empresa de TI madura",
+    descricao:
+      "Padrões estabelecidos, pipelines de dados sólidos, área de negócio parada na fila. Entramos como parceiros táticos da TI.",
+  },
+  {
+    perfil: "Empresa com sistema legado",
+    descricao:
+      "ERP de 15 anos, planilhas de reconciliação, shadow IT por toda parte. Diagnóstico de maturidade, plano de modernização, camada de IA por cima.",
+  },
+];
+
+const areas = [
+  "Operações",
+  "Comercial",
+  "Recursos Humanos",
+  "Financeiro",
+  "Implementação",
+  "Fiscalização",
+  "Atendimento",
+];
+---
+
+<section class="surface-1 section-pad" aria-labelledby="paraquem-title">
+  <div class="container-editorial">
+    <h2 id="paraquem-title" class="h2 reveal measure">
+      Os títulos mudam. O perfil <span class="accent-urucum">humano</span>, não.
+    </h2>
+
+    <div class="mt-[64px] md:mt-[88px] grid grid-cols-1 md:grid-cols-3 gap-[40px] md:gap-[56px]">
+      {
+        perfis.map((p, i) => (
+          <article class="reveal" style={`transition-delay: ${i * 120}ms`}>
+            <h3 class="h3">{p.perfil}</h3>
+            <p class="mt-[16px] body">{p.descricao}</p>
+          </article>
+        ))
+      }
+    </div>
+
+    <hr class="divider mt-[88px] md:mt-[104px]" />
+
+    <div class="mt-[40px] grid grid-cols-1 md:grid-cols-[1fr_3fr] gap-[16px] md:gap-[64px] items-baseline">
+      <p class="body-sm" style="letter-spacing: 0.04em; text-transform: uppercase;">áreas atendidas</p>
+      <ul class="flex flex-wrap gap-x-[24px] gap-y-[8px] body">
+        {areas.map((a) => <li>{a}</li>)}
+      </ul>
+    </div>
+  </div>
+</section>

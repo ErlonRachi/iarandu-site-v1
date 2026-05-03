@@ -1,0 +1,328 @@
+@import "tailwindcss";
+
+/* ----------------------------------------------------------------------------
+ * Variant B — Klim/Linear / Brutalismo-spec
+ * Single committed sans (Bricolage Grotesque, variable). Drenched verde-musgo
+ * background; branco-papel as ink. Visible thin grid. Tabular numbering.
+ * ------------------------------------------------------------------------- */
+
+:root {
+  --b-bg: #2F4030;          /* drenched verde-musgo */
+  --b-bg-deep: #1F2C22;
+  --b-ink: #F1ECE0;         /* branco-papel */
+  --b-ink-soft: #C7CFC2;    /* musgo-light tint */
+  --b-line: rgba(241, 236, 224, 0.16);
+  --b-line-strong: rgba(241, 236, 224, 0.32);
+  --b-papel: #F1ECE0;
+  --b-papel-soft: #F7F3EA;
+  --b-musgo: #2F4030;
+  --b-urucum: #C25E3A;
+  --b-urucum-fresh: #D6663A;
+  --b-ease: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+html.variant-b {
+  background: var(--b-bg);
+  color: var(--b-ink);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html.variant-b body {
+  font-family: "Bricolage Grotesque", system-ui, -apple-system, "Segoe UI", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.55;
+  font-variation-settings: "wdth" 100, "opsz" 14;
+  font-feature-settings: "ss01", "tnum";
+  letter-spacing: 0;
+}
+
+html.variant-b ::selection {
+  background: var(--b-urucum);
+  color: var(--b-ink);
+}
+
+/* ----------------------------------------------------------------------------
+ * Type — single family, weight contrast does the work
+ * ------------------------------------------------------------------------- */
+
+.b-display-xxl {
+  font-family: "Bricolage Grotesque", system-ui, sans-serif;
+  font-weight: 800;
+  font-variation-settings: "wdth" 100, "opsz" 96;
+  font-size: clamp(56px, 9vw, 144px);
+  line-height: 0.94;
+  letter-spacing: -0.035em;
+}
+
+.b-display-xl {
+  font-family: "Bricolage Grotesque", system-ui, sans-serif;
+  font-weight: 800;
+  font-variation-settings: "wdth" 100, "opsz" 72;
+  font-size: clamp(40px, 5.4vw, 80px);
+  line-height: 1.0;
+  letter-spacing: -0.028em;
+}
+
+.b-display-lg {
+  font-family: "Bricolage Grotesque", system-ui, sans-serif;
+  font-weight: 800;
+  font-variation-settings: "wdth" 100, "opsz" 48;
+  font-size: clamp(32px, 3.6vw, 52px);
+  line-height: 1.05;
+  letter-spacing: -0.022em;
+}
+
+.b-h2 {
+  font-family: "Bricolage Grotesque", system-ui, sans-serif;
+  font-weight: 700;
+  font-variation-settings: "wdth" 100, "opsz" 24;
+  font-size: clamp(22px, 2.2vw, 28px);
+  line-height: 1.2;
+  letter-spacing: -0.014em;
+}
+
+.b-h3 {
+  font-family: "Bricolage Grotesque", system-ui, sans-serif;
+  font-weight: 600;
+  font-variation-settings: "wdth" 100, "opsz" 18;
+  font-size: clamp(17px, 1.4vw, 19px);
+  line-height: 1.3;
+  letter-spacing: -0.008em;
+}
+
+.b-body-lg {
+  font-size: clamp(17px, 1.4vw, 19px);
+  line-height: 1.55;
+  font-variation-settings: "wdth" 100, "opsz" 16;
+}
+
+.b-body {
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.b-body-sm {
+  font-size: 13px;
+  line-height: 1.45;
+  color: var(--b-ink-soft);
+}
+
+.b-label {
+  font-family: "Bricolage Grotesque", system-ui, sans-serif;
+  font-weight: 500;
+  font-size: 11px;
+  line-height: 1.2;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  font-feature-settings: "tnum", "ss01";
+  color: var(--b-ink-soft);
+}
+
+.b-num {
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum";
+}
+
+/* ----------------------------------------------------------------------------
+ * Layout — strict 12-col grid, visible hairlines on Linear surfaces
+ * ------------------------------------------------------------------------- */
+
+.b-container {
+  max-width: 84rem;
+  margin-inline: auto;
+  padding-inline: 24px;
+}
+
+@media (min-width: 768px) {
+  .b-container {
+    padding-inline: 56px;
+  }
+}
+
+.b-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 24px;
+}
+
+@media (min-width: 768px) {
+  .b-grid {
+    gap: 32px;
+  }
+}
+
+/* Visible thin column rules — voice fingerprint of B */
+.b-rules {
+  position: relative;
+}
+
+.b-rules::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image: repeating-linear-gradient(
+    to right,
+    transparent 0,
+    transparent calc(100% / 12 - 1px),
+    var(--b-line) calc(100% / 12 - 1px),
+    var(--b-line) calc(100% / 12)
+  );
+  opacity: 0.6;
+}
+
+.b-section {
+  padding-block: 96px;
+  border-top: 1px solid var(--b-line);
+}
+
+@media (min-width: 768px) {
+  .b-section {
+    padding-block: 144px;
+  }
+}
+
+.b-section-tight {
+  padding-block: 64px;
+}
+
+@media (min-width: 768px) {
+  .b-section-tight {
+    padding-block: 88px;
+  }
+}
+
+/* Surface inversions */
+.b-surface-papel {
+  background: var(--b-papel);
+  color: var(--b-musgo);
+}
+
+.b-surface-papel .b-label,
+.b-surface-papel .b-body-sm {
+  color: rgba(47, 64, 48, 0.65);
+}
+
+.b-surface-deep {
+  background: var(--b-bg-deep);
+  color: var(--b-ink);
+}
+
+/* ----------------------------------------------------------------------------
+ * Section header — §-number + label rail
+ * ------------------------------------------------------------------------- */
+
+.b-section-header {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 12px;
+  align-items: baseline;
+  border-bottom: 1px solid var(--b-line);
+  padding-bottom: 16px;
+  margin-bottom: 56px;
+}
+
+.b-section-num {
+  font-family: "Bricolage Grotesque", system-ui, sans-serif;
+  font-weight: 600;
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  font-variant-numeric: tabular-nums;
+  color: var(--b-ink-soft);
+}
+
+.b-section-papel .b-section-num {
+  color: rgba(47, 64, 48, 0.55);
+}
+
+/* ----------------------------------------------------------------------------
+ * Links + CTA
+ * ------------------------------------------------------------------------- */
+
+.b-link {
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 1px;
+  transition: color 180ms var(--b-ease), border-color 180ms var(--b-ease);
+}
+
+.b-link:hover,
+.b-link:focus-visible {
+  color: var(--b-urucum);
+  border-color: var(--b-urucum);
+}
+
+.b-cta {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 12px;
+  padding: 16px 24px;
+  background: var(--b-urucum);
+  color: var(--b-papel);
+  border: 0;
+  font-family: "Bricolage Grotesque", system-ui, sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  letter-spacing: -0.005em;
+  cursor: pointer;
+  transition: background-color 180ms var(--b-ease);
+}
+
+.b-cta:hover,
+.b-cta:focus-visible {
+  background: var(--b-urucum-fresh);
+}
+
+/* Form inputs — flat, line-only */
+.b-input {
+  width: 100%;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid var(--b-line-strong);
+  padding: 14px 0;
+  color: inherit;
+  font-family: inherit;
+  font-size: 17px;
+  outline: none;
+  transition: border-color 180ms var(--b-ease);
+}
+
+.b-input:focus-visible {
+  border-color: var(--b-papel);
+  outline: none;
+}
+
+/* ----------------------------------------------------------------------------
+ * Reveals
+ * ------------------------------------------------------------------------- */
+
+.b-reveal {
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity 600ms var(--b-ease), transform 600ms var(--b-ease);
+}
+
+.b-reveal.is-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .b-reveal {
+    transform: none;
+    transition: opacity 200ms linear;
+  }
+  .b-link,
+  .b-cta {
+    transition: none;
+  }
+}
+
+:focus-visible {
+  outline: 2px solid var(--b-urucum);
+  outline-offset: 3px;
+}

@@ -1,0 +1,10 @@
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="iarandu mark">
+  <title>iarandu mark</title>
+  <g transform="translate(100, 100)" stroke="#2F4030" fill="none">
+    <ellipse rx="72" ry="22" stroke-width="6" transform="rotate(-30)"/>
+    <ellipse rx="72" ry="22" stroke-width="6"/>
+    <ellipse rx="72" ry="22" stroke-width="6" transform="rotate(30)"/>
+    <circle cx="0" cy="0" r="6" fill="#2F4030" stroke="none"/>
+    <circle cx="62.35" cy="-36" r="14" fill="#C25E3A" stroke="none"/>
+  </g>
+</svg>

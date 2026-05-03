@@ -1,0 +1,29 @@
+---
+import Logo from "../Logo.astro";
+---
+
+<footer class="b-surface-deep" style="border-top: 1px solid var(--b-line); padding-block: 48px;">
+  <div class="b-container b-grid" style="align-items: center;">
+    <p class="b-label" style="grid-column: 1 / span 4;">
+      São Paulo · Milano
+    </p>
+
+    <div style="grid-column: 5 / span 4; display: flex; justify-content: center; color: var(--b-ink);">
+      <a href="#topo" aria-label="Voltar ao topo">
+        <Logo variant="mark" width={28} />
+      </a>
+    </div>
+
+    <div
+      class="b-label"
+      style="grid-column: 9 / -1; display: flex; justify-content: flex-end; gap: 24px;"
+    >
+      <a class="b-link" href="https://www.linkedin.com/company/iarandu" target="_blank" rel="noopener" style="border: 0;">linkedin</a>
+      <a class="b-link" href="mailto:we@iarandu.tech" style="border: 0;">we@iarandu.tech</a>
+    </div>
+  </div>
+
+  <div class="b-container b-grid" style="margin-top: 24px;">
+    <p class="b-body-sm" style="grid-column: 1 / -1; opacity: 0.5;">© 2026 Iarandu.</p>
+  </div>
+</footer>

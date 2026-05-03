@@ -1,0 +1,78 @@
+---
+const socios = [
+  {
+    nome: "Eduardo Campos",
+    apelido: "Duda",
+    papel: "Produtos digitais",
+    bio: "Mercado Libre, Coca-Cola, Centauro. À frente da jornada de IA da TOTVS dentro da Iarandu.",
+    linkedin: "https://www.linkedin.com/in/",
+  },
+  {
+    nome: "Mauro Resende",
+    papel: "Tecnologia & infraestrutura em nuvem",
+    bio: "+10 anos no Google Cloud LATAM. CTO de startups brasileiras antes da Iarandu.",
+    linkedin: "https://www.linkedin.com/in/",
+  },
+  {
+    nome: "Erlon Rachi",
+    papel: "Inteligência artificial & dados",
+    bio: "Carreira em Ford Motor, Kaizen Gaming, CI&T. Sediado em Milão.",
+    linkedin: "https://www.linkedin.com/in/",
+  },
+];
+---
+
+<section class="c-tile c-tile-papel c-pad" aria-labelledby="c-socios">
+  <div class="c-container">
+    <p class="c-label c-reveal" style="opacity: 0.55;">sócios</p>
+
+    <h2
+      id="c-socios"
+      class="c-display-xl c-reveal"
+      style="margin-top: 32px;"
+    >
+      Três sócios.
+      <span class="c-display-italic" style="display: block; margin-top: 8px; opacity: 0.65; font-size: 0.6em;">
+        trinta anos de experiência combinada.
+      </span>
+    </h2>
+
+    <ul
+      style="margin-top: 96px; display: grid; grid-template-columns: repeat(12, 1fr); gap: 40px;"
+    >
+      {
+        socios.map((s, i) => (
+          <li
+            class="c-reveal"
+            style={`grid-column: ${i === 0 ? "1 / span 4" : i === 1 ? "5 / span 4" : "9 / span 4"}; transition-delay: ${i * 140}ms;`}
+          >
+            <div
+              style="aspect-ratio: 4/5; background: linear-gradient(180deg, var(--c-musgo) 0%, var(--c-musgo-deep) 100%);"
+              aria-hidden="true"
+            />
+            <p class="c-label" style="margin-top: 20px; opacity: 0.55;">{s.papel}</p>
+            <h3
+              class="c-display-lg"
+              style="margin-top: 8px; font-size: clamp(22px, 2vw, 28px);"
+            >
+              {s.apelido ? `${s.nome} "${s.apelido}"` : s.nome}
+            </h3>
+            <p class="c-body" style="margin-top: 16px; opacity: 0.78;">
+              {s.bio}
+            </p>
+            <p class="c-body-sm" style="margin-top: 16px;">
+              <a class="c-link" href={s.linkedin} target="_blank" rel="noopener">
+                LinkedIn
+              </a>
+            </p>
+          </li>
+        ))
+      }
+    </ul>
+
+    <p class="c-body-sm c-reveal" style="margin-top: 80px; max-width: 60ch;">
+      Time: 30 perfis profissionais, nem todos humanos. AI-native por
+      construção, não por reposicionamento. Origens: CI&amp;T, Google, USP, Unicamp.
+    </p>
+  </div>
+</section>

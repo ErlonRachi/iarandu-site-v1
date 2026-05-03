@@ -1,0 +1,62 @@
+---
+const pilares = [
+  {
+    titulo: "Compliance",
+    descricao: "Trabalhamos dentro do que a TI já definiu. Políticas de dados, perímetros, auditoria.",
+  },
+  {
+    titulo: "Segurança",
+    descricao: "Identidade, segredo, log, isolamento. Sem credencial em planilha, sem chave em e-mail.",
+  },
+  {
+    titulo: "Integração total",
+    descricao: "Padrões da TI, pipelines da TI, observabilidade da TI. Entregamos código que a casa mantém.",
+  },
+];
+---
+
+<section class="c-tile c-tile-nanquim c-pad" aria-labelledby="c-posicao">
+  <div class="c-container-narrow">
+    <p class="c-label c-reveal" style="opacity: 0.65;">posição em relação à ti</p>
+
+    <h2
+      id="c-posicao"
+      class="c-display-xl c-reveal"
+      style="margin-top: 32px;"
+    >
+      Aliados táticos.
+      <span class="c-display-italic" style="color: var(--c-urucum); display: block; margin-top: 8px;">
+        A banda extra
+      </span>
+      que o CTO gostaria de ter.
+    </h2>
+
+    <p
+      class="c-body-lg c-reveal"
+      style="margin-top: 56px; max-width: 60ch; opacity: 0.85; transition-delay: 200ms;"
+    >
+      Saímos do orçamento da área de negócio, mas trabalhamos para a TI, com
+      os padrões da TI. Não competimos com o time da casa, destravamos.
+    </p>
+  </div>
+
+  <div class="c-container" style="margin-top: 104px;">
+    <ol style="display: grid; grid-template-columns: repeat(12, 1fr); gap: 40px;">
+      {
+        pilares.map((p, i) => (
+          <li
+            class="c-reveal"
+            style={`grid-column: ${i === 0 ? "1 / span 4" : i === 1 ? "5 / span 4" : "9 / span 4"}; padding-top: 24px; border-top: 1px solid rgba(241, 236, 224, 0.24); transition-delay: ${i * 100}ms;`}
+          >
+            <h3 class="c-h2" style="font-family: 'Bodoni Moda', Georgia, serif; font-weight: 700;">
+              {p.titulo}
+            </h3>
+            <p class="c-body" style="margin-top: 16px; opacity: 0.85;">
+              {p.descricao}
+            </p>
+          </li>
+        ))
+      }
+    </ol>
+  </div>
+</section>

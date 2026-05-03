@@ -1,0 +1,504 @@
+@import "tailwindcss";
+
+/* ----------------------------------------------------------------------------
+ * Iarandu — design tokens (DESIGN.md v1, dark variant)
+ * Drenched dark surfaces (azul-nanquim family) with branco-papel ink and three
+ * named accents — azul, verde, urucum — each used once per section to mark a
+ * single keyword.
+ * ------------------------------------------------------------------------- */
+
+@theme {
+  --color-papel: #F1ECE0;
+  --color-papel-soft: #F7F3EA;
+  --color-musgo: #2F4030;
+  --color-musgo-deep: #1F2C22;
+  --color-nanquim: #1B2A3A;
+  --color-nanquim-deep: #0E1A26;
+  --color-nanquim-deeper: #0A131C;
+  --color-urucum: #C25E3A;
+  --color-urucum-fresh: #D6663A;
+  --color-azul-ceu: #7BB1CF;
+  --color-verde-folha: #8FBE92;
+
+  --font-display: "Fraunces", Georgia, serif;
+  --font-sans: "Inter Tight", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+
+  --spacing-1: 4px;
+  --spacing-2: 8px;
+  --spacing-3: 16px;
+  --spacing-4: 24px;
+  --spacing-5: 40px;
+  --spacing-6: 64px;
+  --spacing-7: 104px;
+  --spacing-8: 168px;
+  --spacing-9: 272px;
+
+  --ease-quart: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+:root {
+  --branco-papel: #F1ECE0;
+  --papel-soft: #F7F3EA;
+  --verde-musgo: #2F4030;
+  --verde-musgo-deep: #1F2C22;
+  --azul-nanquim: #1B2A3A;
+  --azul-nanquim-deep: #0E1A26;
+  --azul-nanquim-deeper: #0A131C;
+  --urucum: #C25E3A;
+  --urucum-fresh: #D6663A;
+  --azul-ceu: #7BB1CF;
+  --verde-folha: #8FBE92;
+
+  --ink: #F1ECE0;
+  --ink-soft: rgba(241, 236, 224, 0.78);
+  --ink-muted: rgba(241, 236, 224, 0.55);
+  --linha-papel: rgba(241, 236, 224, 0.18);
+  --linha-papel-strong: rgba(241, 236, 224, 0.32);
+
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+html {
+  background: var(--azul-nanquim-deep);
+  color: var(--ink);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  font-family: "Inter Tight", system-ui, sans-serif;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 1.66;
+  letter-spacing: 0.003em;
+}
+
+::selection {
+  background: var(--urucum);
+  color: var(--ink);
+}
+
+/* ----------------------------------------------------------------------------
+ * Type — Fraunces ceremonial, Inter Tight working
+ * Light-on-dark: line-height bumped per DESIGN.md a11y note
+ * ------------------------------------------------------------------------- */
+
+.font-display {
+  font-family: "Fraunces", Georgia, serif;
+  font-weight: 700;
+  font-variation-settings: "opsz" 144, "SOFT" 30;
+  letter-spacing: -0.015em;
+}
+
+.display-xl {
+  font-family: "Fraunces", Georgia, serif;
+  font-weight: 700;
+  font-variation-settings: "opsz" 144, "SOFT" 30;
+  letter-spacing: -0.022em;
+  font-size: clamp(48px, 7.6vw, 112px);
+  line-height: 1.04;
+}
+
+.display-lg {
+  font-family: "Fraunces", Georgia, serif;
+  font-weight: 700;
+  font-variation-settings: "opsz" 144, "SOFT" 30;
+  letter-spacing: -0.018em;
+  font-size: clamp(40px, 5.4vw, 76px);
+  line-height: 1.08;
+}
+
+.display-md {
+  font-family: "Fraunces", Georgia, serif;
+  font-weight: 700;
+  font-variation-settings: "opsz" 144, "SOFT" 30;
+  letter-spacing: -0.016em;
+  font-size: clamp(32px, 3.8vw, 52px);
+  line-height: 1.12;
+}
+
+.display-sm {
+  font-family: "Fraunces", Georgia, serif;
+  font-weight: 700;
+  font-variation-settings: "opsz" 96, "SOFT" 30;
+  letter-spacing: -0.012em;
+  font-size: clamp(26px, 2.8vw, 40px);
+  line-height: 1.18;
+}
+
+.h2 {
+  font-family: "Inter Tight", system-ui, sans-serif;
+  font-weight: 600;
+  font-size: clamp(22px, 2.2vw, 30px);
+  line-height: 1.28;
+  letter-spacing: -0.008em;
+}
+
+.h3 {
+  font-family: "Inter Tight", system-ui, sans-serif;
+  font-weight: 500;
+  font-size: clamp(18px, 1.5vw, 21px);
+  line-height: 1.4;
+  letter-spacing: -0.005em;
+}
+
+.body-lg {
+  font-size: clamp(18px, 1.4vw, 20px);
+  line-height: 1.62;
+  color: var(--ink-soft);
+}
+
+.body {
+  font-size: clamp(16px, 1.15vw, 17px);
+  line-height: 1.66;
+  color: var(--ink-soft);
+}
+
+.body-sm {
+  font-size: 14px;
+  line-height: 1.55;
+  color: var(--ink-muted);
+}
+
+/* ----------------------------------------------------------------------------
+ * Accents — three colors, one keyword per section.
+ * Each .accent-* gives the chosen word a single color shift, no decoration.
+ * ------------------------------------------------------------------------- */
+
+.accent-urucum  { color: var(--urucum); }
+.accent-azul    { color: var(--azul-ceu); }
+.accent-verde   { color: var(--verde-folha); }
+
+/* ----------------------------------------------------------------------------
+ * Surfaces — quiet alternation between four dark tones
+ * ------------------------------------------------------------------------- */
+
+.surface-1 { background: var(--azul-nanquim-deep); color: var(--ink); }
+.surface-2 { background: var(--azul-nanquim);      color: var(--ink); }
+.surface-3 { background: var(--verde-musgo-deep);  color: var(--ink); }
+.surface-4 { background: var(--azul-nanquim-deeper); color: var(--ink); }
+
+/* ----------------------------------------------------------------------------
+ * Layout helpers
+ * ------------------------------------------------------------------------- */
+
+.container-editorial {
+  max-width: 76rem;
+  margin-inline: auto;
+  padding-inline: 24px;
+}
+
+@media (min-width: 768px) {
+  .container-editorial { padding-inline: 56px; }
+}
+
+.container-narrow {
+  max-width: 56rem;
+  margin-inline: auto;
+  padding-inline: 24px;
+}
+
+@media (min-width: 768px) {
+  .container-narrow { padding-inline: 56px; }
+}
+
+.measure { max-width: 64ch; }
+.measure-tight { max-width: 56ch; }
+.measure-manifesto { max-width: 38ch; }
+
+.section-pad {
+  padding-block: 112px;
+}
+
+.section-pad-loose {
+  padding-block: 144px;
+}
+
+.section-pad-tight {
+  padding-block: 72px;
+}
+
+@media (min-width: 768px) {
+  .section-pad        { padding-block: 200px; }
+  .section-pad-loose  { padding-block: 256px; }
+  .section-pad-tight  { padding-block: 120px; }
+}
+
+/* ----------------------------------------------------------------------------
+ * Links + CTA — designed for dark surfaces
+ * ------------------------------------------------------------------------- */
+
+.link-editorial {
+  position: relative;
+  color: inherit;
+  text-decoration: none;
+  background-image: linear-gradient(currentColor, currentColor);
+  background-size: 0% 1px;
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+  transition: background-size 220ms var(--ease), color 220ms var(--ease);
+}
+
+.link-editorial:hover,
+.link-editorial:focus-visible {
+  background-size: 100% 1px;
+  color: var(--urucum-fresh);
+}
+
+.link-urucum {
+  color: var(--urucum-fresh);
+  text-decoration: none;
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 2px;
+  transition: color 180ms var(--ease), border-color 180ms var(--ease);
+}
+
+.link-urucum:hover,
+.link-urucum:focus-visible {
+  color: var(--urucum);
+  border-color: var(--urucum);
+}
+
+.cta-primary {
+  display: inline-block;
+  background: var(--urucum);
+  color: var(--ink);
+  padding: 18px 32px;
+  border: 0;
+  border-radius: 2px;
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 17px;
+  letter-spacing: 0.005em;
+  cursor: pointer;
+  transition: background-color 180ms var(--ease);
+}
+
+.cta-primary:hover,
+.cta-primary:focus-visible {
+  background: var(--urucum-fresh);
+}
+
+/* ----------------------------------------------------------------------------
+ * Strokes
+ * ------------------------------------------------------------------------- */
+
+.divider {
+  border: 0;
+  border-top: 1px solid var(--linha-papel);
+}
+
+.rule {
+  border-top: 1px solid var(--linha-papel);
+}
+
+/* ----------------------------------------------------------------------------
+ * Focus
+ * ------------------------------------------------------------------------- */
+
+:focus-visible {
+  outline: 2px solid var(--urucum-fresh);
+  outline-offset: 3px;
+}
+
+/* ----------------------------------------------------------------------------
+ * Reveal — opacity + organic Y + soft scale; respects reduced motion
+ * ------------------------------------------------------------------------- */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(16px) scale(0.992);
+  transform-origin: 0 50%;
+  transition:
+    opacity 1100ms var(--ease),
+    transform 1100ms var(--ease);
+  will-change: opacity, transform;
+}
+
+.reveal.is-in {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+/* Word-by-word typographic reveal — single execution, staggered */
+[data-words] .word {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(0.45em) rotate(2.5deg);
+  transform-origin: 0 100%;
+  transition:
+    opacity 900ms var(--ease),
+    transform 900ms var(--ease);
+  transition-delay: calc(var(--i, 0) * 65ms);
+  will-change: opacity, transform;
+}
+
+[data-words].is-in .word {
+  opacity: 1;
+  transform: translateY(0) rotate(0);
+}
+
+/* SVG curve draw — logarithmic / river-flow, single shot */
+[data-curve] {
+  stroke-dasharray: 100;
+  stroke-dashoffset: 100;
+  transition: stroke-dashoffset 2200ms var(--ease);
+  transition-delay: 280ms;
+}
+
+[data-curve].is-in {
+  stroke-dashoffset: 0;
+}
+
+/* Logo bloom — orbits draw, nucleus fades, planet arrives, wordmark settles */
+.logo-bloom .orbit {
+  stroke-dasharray: 100;
+  stroke-dashoffset: 100;
+  animation: orbit-draw 1500ms var(--ease) forwards;
+}
+.logo-bloom .orbit-1 { animation-delay: 120ms; }
+.logo-bloom .orbit-2 { animation-delay: 320ms; }
+.logo-bloom .orbit-3 { animation-delay: 520ms; }
+
+.logo-bloom .nucleus {
+  opacity: 0;
+  transform-box: fill-box;
+  transform-origin: center;
+  transform: scale(0);
+  animation: nucleus-bloom 700ms var(--ease) 1300ms forwards;
+}
+
+.logo-bloom .planet {
+  opacity: 0;
+  transform-box: fill-box;
+  transform-origin: center;
+  transform: scale(0.4) translateY(-6px);
+  animation: planet-arrive 1000ms var(--ease) 1500ms forwards;
+}
+
+.logo-bloom .wordmark-group {
+  opacity: 0;
+  transform: translateY(8px);
+  animation: wordmark-settle 900ms var(--ease) 1750ms forwards;
+}
+
+.logo-bloom .tittle,
+.logo-bloom .period {
+  opacity: 0;
+  transform-box: fill-box;
+  transform-origin: center;
+  transform: scale(0);
+  animation: nucleus-bloom 700ms var(--ease) forwards;
+}
+.logo-bloom .tittle { animation-delay: 2150ms; }
+.logo-bloom .period { animation-delay: 2300ms; }
+
+@keyframes orbit-draw  { to { stroke-dashoffset: 0; } }
+@keyframes nucleus-bloom {
+  to { opacity: 1; transform: scale(1); }
+}
+@keyframes planet-arrive {
+  to { opacity: 1; transform: scale(1) translateY(0); }
+}
+@keyframes wordmark-settle {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Role cloud — scatter of role names; faded constellation behind §8.
+ * Each word fades in once when the cloud enters viewport, then stays.
+ * Human roles are branco-papel; AI roles use accent-azul + italic. */
+
+.role-cloud {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.role-word {
+  position: absolute;
+  font-family: "Inter Tight", system-ui, sans-serif;
+  font-weight: 400;
+  white-space: nowrap;
+  opacity: 0;
+  transform: translateY(10px) translateX(var(--dx, 0));
+  transition:
+    opacity 1200ms var(--ease),
+    transform 1200ms var(--ease);
+  transition-delay: calc(var(--i, 0) * 70ms);
+  letter-spacing: 0.005em;
+  color: var(--ink);
+  will-change: opacity, transform;
+}
+
+.role-word.role-ai {
+  font-style: italic;
+  color: var(--azul-ceu);
+}
+
+.role-cloud.is-in .role-word {
+  opacity: var(--alpha, 0.3);
+  transform: translateY(0) translateX(0);
+}
+
+/* Ambient curve background — sits inside dark sections, drawn once */
+.ambient-curve {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: visible;
+  color: var(--ink);
+  opacity: 0.18;
+  z-index: 0;
+}
+
+.ambient-curve path {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1;
+  vector-effect: non-scaling-stroke;
+}
+
+.has-ambient { position: relative; isolation: isolate; }
+.has-ambient > * { position: relative; z-index: 1; }
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    transform: none;
+    transition: opacity 250ms linear;
+  }
+  [data-words] .word {
+    transform: none;
+    transition: opacity 250ms linear;
+    transition-delay: 0ms;
+  }
+  [data-curve] {
+    stroke-dashoffset: 0;
+    transition: none;
+  }
+  .role-word {
+    transform: none;
+    transition: opacity 250ms linear;
+    transition-delay: 0ms;
+  }
+  .role-cloud.is-in .role-word { transform: none; }
+  .logo-bloom .orbit,
+  .logo-bloom .nucleus,
+  .logo-bloom .planet,
+  .logo-bloom .wordmark-group,
+  .logo-bloom .tittle,
+  .logo-bloom .period {
+    animation: none;
+    opacity: 1;
+    transform: none;
+    stroke-dashoffset: 0;
+  }
+  .link-editorial,
+  .link-urucum,
+  .cta-primary { transition: none; }
+}
