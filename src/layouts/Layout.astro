@@ -1,5 +1,6 @@
 ---
 import "../styles/global.css";
+import StickyHeader from "../components/StickyHeader.astro";
 
 interface Props {
   title?: string;
@@ -8,8 +9,10 @@ interface Props {
 
 const {
   title = "Iarandu — a camada de IA que sua área de negócio precisa",
-  description = "Construímos a camada de IA e dados que as áreas de negócio das empresas precisam, em parceria com a TI, sem competir pela bandwidth da sua área de tecnologia.",
+  description = "Construímos a camada de IA que sua área de negócio precisa. Em parceria com a TI da empresa, sem disputar o fôlego dela.",
 } = Astro.props;
+
+const canonicalHref = new URL(Astro.url.pathname, Astro.site ?? Astro.url.origin).href;
 ---
 
 <!doctype html>
@@ -21,7 +24,7 @@ const {
     <meta name="generator" content={Astro.generator} />
 
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="canonical" href={Astro.url.href} />
+    <link rel="canonical" href={canonicalHref} />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -39,12 +42,13 @@ const {
     <meta property="og:locale" content="pt_BR" />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
-    <meta property="og:url" content={Astro.url.href} />
+    <meta property="og:url" content={canonicalHref} />
     <meta name="theme-color" content="#0E1A26" />
 
     <title>{title}</title>
   </head>
   <body>
+    <StickyHeader />
     <slot />
 
     <script>

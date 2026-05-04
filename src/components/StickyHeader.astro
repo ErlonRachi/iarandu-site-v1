@@ -1,0 +1,105 @@
+---
+// Global sticky header — logo + single CTA. Border appears after 10px scroll.
+---
+
+<header id="sticky-header" class="sticky-header" role="banner">
+  <div class="sticky-header-inner">
+    <a href="#topo" class="sticky-logo" aria-label="Iarandu — início">iarandu<span class="sticky-logo-dot">.</span></a>
+    <a href="#vamos" class="sticky-cta">
+      <span class="sticky-cta-text">fale com a gente</span>
+      <span class="sticky-cta-arrow" aria-hidden="true">→</span>
+    </a>
+  </div>
+</header>
+
+<style>
+  .sticky-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    height: 50px;
+    background: rgba(11, 23, 32, 0.88);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid transparent;
+    transition: border-color 220ms var(--ease), background-color 220ms var(--ease);
+  }
+  .sticky-header.is-scrolled {
+    border-bottom-color: var(--linha-azul-strong);
+    background: rgba(11, 23, 32, 0.92);
+  }
+  .sticky-header-inner {
+    max-width: 76rem;
+    margin-inline: auto;
+    height: 100%;
+    padding-inline: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  @media (min-width: 768px) {
+    .sticky-header-inner { padding-inline: 56px; }
+  }
+  .sticky-logo {
+    font-family: "Fraunces", Georgia, serif;
+    font-weight: 600;
+    font-size: 18px;
+    color: var(--ink);
+    text-decoration: none;
+    letter-spacing: -0.015em;
+    line-height: 1;
+    font-variation-settings: "opsz" 96, "SOFT" 30;
+  }
+  .sticky-logo-dot {
+    color: var(--urucum);
+  }
+  .sticky-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--ouro);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.005em;
+    padding: 7px 18px;
+    border: 1px solid rgba(200, 169, 110, 0.35);
+    border-radius: 2px;
+    background: transparent;
+    transition: background-color 180ms var(--ease), border-color 180ms var(--ease);
+    white-space: nowrap;
+  }
+  .sticky-cta:hover,
+  .sticky-cta:focus-visible {
+    background: rgba(200, 169, 110, 0.10);
+    border-color: rgba(200, 169, 110, 0.55);
+  }
+  .sticky-cta-arrow {
+    transition: transform 220ms var(--ease);
+    will-change: transform;
+  }
+  .sticky-cta:hover .sticky-cta-arrow,
+  .sticky-cta:focus-visible .sticky-cta-arrow {
+    transform: translateX(3px);
+  }
+  @media (max-width: 380px) {
+    .sticky-cta-text { display: none; }
+    .sticky-cta { padding: 7px 12px; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .sticky-header,
+    .sticky-cta,
+    .sticky-cta-arrow { transition: none; }
+  }
+</style>
+
+<script>
+  const header = document.getElementById("sticky-header");
+  if (header) {
+    const onScroll = () => {
+      header.classList.toggle("is-scrolled", window.scrollY > 10);
+    };
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+  }
+</script>

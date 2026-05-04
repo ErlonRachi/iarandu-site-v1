@@ -1,91 +1,62 @@
 ---
-// Section 8 — surface-1. Centralized founders, drifting blurred role-cloud,
-// minimal-line founder illustrations (caricature, few details).
+// Section 8 — surface-1. Centralized founders + static role chips
+// (replacing the drifting role-cloud).
 const socios = [
   {
     nome: "Eduardo Campos",
     apelido: "Duda",
     papel: "Produtos digitais e IA",
     bio: "Mercado Libre, Coca-Cola, Centauro, CI&T. Nosso especialista em produtos digitais e de IA.",
-    linkedin: "https://www.linkedin.com/in/",
+    linkedin: "https://www.linkedin.com/in/dudacampos/",
     illustration: "duda",
   },
   {
     nome: "Mauro Resende",
     papel: "Infraestrutura, cloud, segurança",
     bio: "+10 anos no Google Cloud LATAM. CTO de startups brasileiras antes da Iarandu. Nosso especialista em infraestrutura, cloud e segurança.",
-    linkedin: "https://www.linkedin.com/in/",
+    linkedin: "https://www.linkedin.com/in/mauronr",
     illustration: "mauro",
   },
   {
     nome: "Erlon Rachi",
     papel: "Dados, ML, governança e IA",
     bio: "Carreira em Ford, CI&T, Kaizen Gaming. Cientista de dados, expert em Dados, Machine Learning, Governança e IA.",
-    linkedin: "https://www.linkedin.com/in/",
+    linkedin: "https://www.linkedin.com/in/erlonrachi/",
     illustration: "erlon",
   },
 ];
 
-// Role cloud — bigger words now, blurred and drifting.
-type Role = {
-  text: string;
-  top: string;
-  left: string;
-  size: number;
-  alpha: number;
-  rotate?: number;
-  ai?: boolean;
-};
-
-const roles: Role[] = [
-  { text: "desenvolvedores",        top: "2%",   left: "2%",  size: 38, alpha: 0.34 },
-  { text: "Claude",                 top: "5%",   left: "38%", size: 52, alpha: 0.5,  ai: true },
-  { text: "matemático",             top: "9%",   left: "70%", size: 32, alpha: 0.3 },
-  { text: "agente de IA",           top: "1%",   left: "82%", size: 36, alpha: 0.46, ai: true },
-  { text: "modelo de linguagem",    top: "16%",  left: "5%",  size: 28, alpha: 0.34, ai: true },
-  { text: "produtos digitais",      top: "18%",  left: "48%", size: 30, alpha: 0.34 },
-  { text: "Claude Code",            top: "24%",  left: "82%", size: 30, alpha: 0.42, ai: true },
-  { text: "marketing",              top: "23%",  left: "68%", size: 26, alpha: 0.28 },
-
-  { text: "executivo",              top: "38%",  left: "-2%", size: 26, alpha: 0.26 },
-  { text: "designer de processos",  top: "46%",  left: "1%",  size: 28, alpha: 0.32, rotate: -2 },
-  { text: "RAG retriever",          top: "54%",  left: "-1%", size: 26, alpha: 0.34, ai: true },
-  { text: "agente autônomo",        top: "70%",  left: "0%",  size: 30, alpha: 0.36, ai: true },
-
-  { text: "vendas",                 top: "39%",  left: "92%", size: 26, alpha: 0.26 },
-  { text: "engenheiro de IA",       top: "48%",  left: "82%", size: 30, alpha: 0.4,  ai: true },
-  { text: "cientista de dados",     top: "56%",  left: "85%", size: 30, alpha: 0.32 },
-  { text: "GPT-4",                  top: "66%",  left: "92%", size: 36, alpha: 0.42, ai: true },
-  { text: "arquiteto de soluções",  top: "74%",  left: "78%", size: 26, alpha: 0.3 },
-
-  { text: "code assistant",         top: "84%",  left: "6%",  size: 28, alpha: 0.4,  ai: true },
-  { text: "consultor",              top: "88%",  left: "30%", size: 24, alpha: 0.26 },
-  { text: "programador",            top: "92%",  left: "52%", size: 30, alpha: 0.32 },
-  { text: "DevOps engineer",        top: "86%",  left: "74%", size: 26, alpha: 0.28 },
-  { text: "model orchestrator",     top: "92%",  left: "60%", size: 26, alpha: 0.36, ai: true },
-  { text: "QA engineer",            top: "80%",  left: "84%", size: 24, alpha: 0.28 },
+// Static role chips — humanos + IA, mistos no grid.
+type Chip = { text: string; ai?: boolean };
+const chips: Chip[] = [
+  { text: "desenvolvedores" },
+  { text: "Claude", ai: true },
+  { text: "matemático" },
+  { text: "agente de IA", ai: true },
+  { text: "modelo de linguagem", ai: true },
+  { text: "produtos digitais" },
+  { text: "Claude Code", ai: true },
+  { text: "designer de processos" },
+  { text: "RAG retriever", ai: true },
+  { text: "cientista de dados" },
+  { text: "agente autônomo", ai: true },
+  { text: "engenheiro de software" },
+  { text: "code assistant", ai: true },
+  { text: "arquiteto de soluções" },
+  { text: "model orchestrator", ai: true },
+  { text: "DevOps engineer" },
+  { text: "Sonnet", ai: true },
+  { text: "QA engineer" },
+  { text: "consultor" },
+  { text: "embedding service", ai: true },
 ];
 ---
 
 <section
   class="surface-1 section-pad"
   aria-labelledby="socios-title"
-  style="position: relative; isolation: isolate; overflow: hidden;"
 >
-  <div class="role-cloud" aria-hidden="true">
-    {
-      roles.map((r, i) => (
-        <span
-          class={r.ai ? "role-word role-ai" : "role-word"}
-          style={`top: ${r.top}; left: ${r.left}; font-size: ${r.size}px; --i: ${i}; --alpha: ${r.alpha}; ${r.rotate ? `--rotate: ${r.rotate}deg;` : ""}`}
-        >
-          {r.text}
-        </span>
-      ))
-    }
-  </div>
-
-  <div class="container-editorial" style="position: relative; z-index: 1;">
+  <div class="container-editorial">
     <div class="text-center" style="margin-inline: auto; max-width: 38ch;">
       <h2 id="socios-title" class="display-md reveal" data-words style="margin: 0 auto;">
         Aqui na Iarandu, temos mais de <span class="accent-azul">30 perfis</span> dedicados ao seu projeto. Nem todos são humanos.
@@ -98,6 +69,16 @@ const roles: Role[] = [
     >
       Origens humanas em CI&amp;T, Google, USP, Unicamp, com vivências em UK, USA, Brasil, Colômbia, Itália e Grécia.
     </p>
+
+    <ul class="role-chips reveal" style="transition-delay: 320ms;">
+      {
+        chips.map((c) => (
+          <li class={c.ai ? "role-chip role-chip-ai" : "role-chip"}>
+            {c.text}
+          </li>
+        ))
+      }
+    </ul>
 
     <hr class="divider mt-[80px] md:mt-[120px]" />
 
@@ -547,6 +528,35 @@ const roles: Role[] = [
 </section>
 
 <style>
+  .role-chips {
+    list-style: none;
+    padding: 0;
+    margin: 56px auto 0;
+    max-width: 920px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+  }
+  @media (min-width: 768px) {
+    .role-chips { margin-top: 72px; }
+  }
+  .role-chip {
+    padding: 5px 14px;
+    border: 1px solid var(--linha-azul-strong);
+    border-radius: 999px;
+    font-size: 12px;
+    line-height: 1.4;
+    color: var(--ink-muted-cool);
+    letter-spacing: -0.005em;
+    background: transparent;
+  }
+  .role-chip-ai {
+    color: var(--azul-ceu);
+    font-style: italic;
+    border-color: rgba(123, 177, 207, 0.32);
+  }
+
   .founder-illustration {
     width: clamp(196px, 20vw, 260px);
     color: var(--ink);

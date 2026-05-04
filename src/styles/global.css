@@ -50,6 +50,14 @@
   --azul-ceu: #7BB1CF;
   --verde-folha: #8FBE92;
 
+  /* New tokens (v11 review) */
+  --azul-header: #0B1720;
+  --azul-card: #132030;
+  --linha-azul-strong: #1e3348;
+  --ouro: #C8A96E;
+  --ouro-fresh: #D4B97D;
+  --ink-muted-cool: #7A8E9B;
+
   --ink: #F1ECE0;
   --ink-soft: rgba(241, 236, 224, 0.78);
   --ink-muted: rgba(241, 236, 224, 0.55);
@@ -57,6 +65,15 @@
   --linha-papel-strong: rgba(241, 236, 224, 0.32);
 
   --ease: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+html {
+  scroll-padding-top: 64px;
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
 }
 
 html {
