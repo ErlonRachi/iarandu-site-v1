@@ -5,5 +5,8 @@ export default defineConfig({
   site: 'https://iarandu.tech',
   vite: {
     plugins: [tailwindcss()],
+    server: {
+      allowedHosts: ['.trycloudflare.com', '.iarandu.tech'],
+    },
   },
 });
