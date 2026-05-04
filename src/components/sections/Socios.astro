@@ -1,32 +1,32 @@
 ---
-// Section 8 — surface-1. Headline: team of 30+ professionals, not all human.
-// Background: scattered constellation of role names — humans in branco-papel,
-// AI roles in italic accent-azul. Single-execution reveal on viewport entry.
-// Foreground: the three founders sit on top.
+// Section 8 — surface-1. Centralized founders, drifting blurred role-cloud,
+// minimal-line founder illustrations (caricature, few details).
 const socios = [
   {
     nome: "Eduardo Campos",
     apelido: "Duda",
-    papel: "Produtos digitais",
-    bio: "Mercado Libre, Coca-Cola, Centauro. À frente da jornada de IA da TOTVS dentro da Iarandu.",
+    papel: "Produtos digitais e IA",
+    bio: "Mercado Libre, Coca-Cola, Centauro, CI&T. Nosso especialista em produtos digitais e de IA.",
     linkedin: "https://www.linkedin.com/in/",
+    illustration: "duda",
   },
   {
     nome: "Mauro Resende",
-    papel: "Tecnologia & infraestrutura em nuvem",
-    bio: "+10 anos no Google Cloud LATAM. CTO de startups brasileiras antes da Iarandu.",
+    papel: "Infraestrutura, cloud, segurança",
+    bio: "+10 anos no Google Cloud LATAM. CTO de startups brasileiras antes da Iarandu. Nosso especialista em infraestrutura, cloud e segurança.",
     linkedin: "https://www.linkedin.com/in/",
+    illustration: "mauro",
   },
   {
     nome: "Erlon Rachi",
-    papel: "Inteligência artificial & dados",
-    bio: "Carreira em Ford Motor, Kaizen Gaming, CI&T. Sediado em Milão.",
+    papel: "Dados, ML, governança e IA",
+    bio: "Carreira em Ford, CI&T, Kaizen Gaming. Cientista de dados, expert em Dados, Machine Learning, Governança e IA.",
     linkedin: "https://www.linkedin.com/in/",
+    illustration: "erlon",
   },
 ];
 
-// Constellation of roles. Mix of human + AI; positions hand-tuned to ring the
-// foreground card area without crowding the headline or footer.
+// Role cloud — bigger words now, blurred and drifting.
 type Role = {
   text: string;
   top: string;
@@ -38,43 +38,46 @@ type Role = {
 };
 
 const roles: Role[] = [
-  { text: "desenvolvedores de software", top: "4%",  left: "5%",  size: 14, alpha: 0.36 },
-  { text: "Claude",                       top: "7%",  left: "34%", size: 17, alpha: 0.5,  ai: true },
-  { text: "matemático",                   top: "11%", left: "60%", size: 13, alpha: 0.3 },
-  { text: "agente de IA",                 top: "5%",  left: "80%", size: 14, alpha: 0.46, ai: true },
-  { text: "modelo de linguagem",          top: "17%", left: "10%", size: 12, alpha: 0.34, ai: true },
-  { text: "produtos digitais",            top: "16%", left: "44%", size: 13, alpha: 0.34 },
-  { text: "Claude Code",                  top: "23%", left: "82%", size: 12, alpha: 0.42, ai: true },
-  { text: "marketing",                    top: "22%", left: "62%", size: 12, alpha: 0.28 },
+  { text: "desenvolvedores",        top: "2%",   left: "2%",  size: 38, alpha: 0.34 },
+  { text: "Claude",                 top: "5%",   left: "38%", size: 52, alpha: 0.5,  ai: true },
+  { text: "matemático",             top: "9%",   left: "70%", size: 32, alpha: 0.3 },
+  { text: "agente de IA",           top: "1%",   left: "82%", size: 36, alpha: 0.46, ai: true },
+  { text: "modelo de linguagem",    top: "16%",  left: "5%",  size: 28, alpha: 0.34, ai: true },
+  { text: "produtos digitais",      top: "18%",  left: "48%", size: 30, alpha: 0.34 },
+  { text: "Claude Code",            top: "24%",  left: "82%", size: 30, alpha: 0.42, ai: true },
+  { text: "marketing",              top: "23%",  left: "68%", size: 26, alpha: 0.28 },
 
-  { text: "executivo",                    top: "37%", left: "1%",  size: 12, alpha: 0.26 },
-  { text: "designer de processos",        top: "44%", left: "3%",  size: 12, alpha: 0.32, rotate: -2 },
-  { text: "RAG retriever",                top: "52%", left: "1%",  size: 11, alpha: 0.34, ai: true },
-  { text: "QA engineer",                  top: "60%", left: "4%",  size: 11, alpha: 0.26 },
-  { text: "agente autônomo",              top: "68%", left: "2%",  size: 12, alpha: 0.36, ai: true },
+  { text: "executivo",              top: "38%",  left: "-2%", size: 26, alpha: 0.26 },
+  { text: "designer de processos",  top: "46%",  left: "1%",  size: 28, alpha: 0.32, rotate: -2 },
+  { text: "RAG retriever",          top: "54%",  left: "-1%", size: 26, alpha: 0.34, ai: true },
+  { text: "agente autônomo",        top: "70%",  left: "0%",  size: 30, alpha: 0.36, ai: true },
 
-  { text: "vendas",                       top: "39%", left: "92%", size: 11, alpha: 0.26 },
-  { text: "engenheiro de IA",             top: "47%", left: "85%", size: 12, alpha: 0.4,  ai: true },
-  { text: "cientista de dados",           top: "55%", left: "88%", size: 13, alpha: 0.32 },
-  { text: "GPT-4",                        top: "64%", left: "92%", size: 14, alpha: 0.42, ai: true },
-  { text: "arquiteto de soluções",        top: "72%", left: "82%", size: 11, alpha: 0.3 },
+  { text: "vendas",                 top: "39%",  left: "92%", size: 26, alpha: 0.26 },
+  { text: "engenheiro de IA",       top: "48%",  left: "82%", size: 30, alpha: 0.4,  ai: true },
+  { text: "cientista de dados",     top: "56%",  left: "85%", size: 30, alpha: 0.32 },
+  { text: "GPT-4",                  top: "66%",  left: "92%", size: 36, alpha: 0.42, ai: true },
+  { text: "arquiteto de soluções",  top: "74%",  left: "78%", size: 26, alpha: 0.3 },
 
-  { text: "code assistant",               top: "82%", left: "8%",  size: 12, alpha: 0.4,  ai: true },
-  { text: "consultor",                    top: "86%", left: "30%", size: 11, alpha: 0.26 },
-  { text: "programador",                  top: "90%", left: "52%", size: 13, alpha: 0.32 },
-  { text: "DevOps engineer",              top: "84%", left: "74%", size: 11, alpha: 0.28 },
-  { text: "web designer",                 top: "92%", left: "84%", size: 12, alpha: 0.3 },
-  { text: "model orchestrator",           top: "88%", left: "62%", size: 11, alpha: 0.36, ai: true },
+  { text: "code assistant",         top: "84%",  left: "6%",  size: 28, alpha: 0.4,  ai: true },
+  { text: "consultor",              top: "88%",  left: "30%", size: 24, alpha: 0.26 },
+  { text: "programador",            top: "92%",  left: "52%", size: 30, alpha: 0.32 },
+  { text: "DevOps engineer",        top: "86%",  left: "74%", size: 26, alpha: 0.28 },
+  { text: "model orchestrator",     top: "92%",  left: "60%", size: 26, alpha: 0.36, ai: true },
+  { text: "QA engineer",            top: "80%",  left: "84%", size: 24, alpha: 0.28 },
 ];
 ---
 
-<section class="surface-1 section-pad" aria-labelledby="socios-title" style="position: relative; isolation: isolate;">
+<section
+  class="surface-1 section-pad"
+  aria-labelledby="socios-title"
+  style="position: relative; isolation: isolate; overflow: hidden;"
+>
   <div class="role-cloud" aria-hidden="true">
     {
       roles.map((r, i) => (
         <span
           class={r.ai ? "role-word role-ai" : "role-word"}
-          style={`top: ${r.top}; left: ${r.left}; font-size: ${r.size}px; --i: ${i}; --alpha: ${r.alpha}; --dx: ${r.ai ? "-6px" : "6px"}; ${r.rotate ? `transform: translateY(10px) rotate(${r.rotate}deg);` : ""}`}
+          style={`top: ${r.top}; left: ${r.left}; font-size: ${r.size}px; --i: ${i}; --alpha: ${r.alpha}; ${r.rotate ? `--rotate: ${r.rotate}deg;` : ""}`}
         >
           {r.text}
         </span>
@@ -83,32 +86,456 @@ const roles: Role[] = [
   </div>
 
   <div class="container-editorial" style="position: relative; z-index: 1;">
-    <h2 id="socios-title" class="display-md reveal measure-manifesto">
-      Mais de <span class="accent-azul">trinta</span> perfis. <span style="display: block;">Nem todos humanos.</span>
-    </h2>
+    <div class="text-center" style="margin-inline: auto; max-width: 38ch;">
+      <h2 id="socios-title" class="display-md reveal" data-words style="margin: 0 auto;">
+        Aqui na Iarandu, temos mais de <span class="accent-azul">30 perfis</span> dedicados ao seu projeto. Nem todos são humanos.
+      </h2>
+    </div>
 
-    <p class="reveal mt-[32px] body-lg measure-tight" style="transition-delay: 200ms;">
-      AI-native por construção, não por reposicionamento. Origens humanas: CI&amp;T, Google, USP, Unicamp.
+    <p
+      class="reveal mt-[32px] body-lg"
+      style="transition-delay: 220ms; max-width: 64ch; margin-inline: auto; text-align: center;"
+    >
+      Origens humanas em CI&amp;T, Google, USP, Unicamp, com vivências em UK, USA, Brasil, Colômbia, Itália e Grécia.
     </p>
 
-    <hr class="divider mt-[64px] md:mt-[88px]" />
+    <hr class="divider mt-[80px] md:mt-[120px]" />
 
-    <ul class="mt-[64px] md:mt-[88px] grid grid-cols-1 md:grid-cols-3 gap-[40px] md:gap-[56px]">
+    <ul class="mt-[64px] md:mt-[96px] grid grid-cols-1 md:grid-cols-3 gap-[40px] md:gap-[56px]">
       {
         socios.map((s, i) => (
-          <li class="reveal" style={`transition-delay: ${i * 120}ms`}>
-            <div
-              class="aspect-[4/5] w-full"
-              style="background: var(--azul-nanquim-deep); background-image: linear-gradient(180deg, rgba(241,236,224,0.08) 0%, rgba(241,236,224,0.02) 100%); border: 1px solid var(--linha-papel);"
-              aria-hidden="true"
-            />
-            <p class="mt-[20px] body-sm" style="letter-spacing: 0.04em; text-transform: uppercase;">
+          <li
+            class="reveal flex flex-col items-center text-center"
+            style={`transition-delay: ${i * 120}ms`}
+          >
+            <div class="founder-illustration" aria-hidden="true">
+              {s.illustration === "duda" && (
+                <svg viewBox="0 0 240 340">
+                  <g class="hatch">
+                    {/* right cheekbone shadow — dense diagonal hatching */}
+                    <line x1="158" y1="156" x2="174" y2="166" />
+                    <line x1="156" y1="162" x2="174" y2="172" />
+                    <line x1="156" y1="168" x2="174" y2="178" />
+                    <line x1="156" y1="174" x2="172" y2="184" />
+                    <line x1="154" y1="180" x2="172" y2="190" />
+                    <line x1="154" y1="186" x2="170" y2="196" />
+                    <line x1="152" y1="192" x2="168" y2="202" />
+                    <line x1="150" y1="198" x2="166" y2="208" />
+                    <line x1="150" y1="206" x2="164" y2="214" />
+                    {/* left cheek lighter hatching */}
+                    <line x1="86" y1="160" x2="98" y2="170" />
+                    <line x1="84" y1="166" x2="96" y2="176" />
+                    <line x1="84" y1="174" x2="94" y2="184" />
+                    <line x1="84" y1="182" x2="94" y2="192" />
+                    {/* under-jaw shadow */}
+                    <line x1="116" y1="248" x2="138" y2="256" />
+                    <line x1="112" y1="252" x2="134" y2="262" />
+                    <line x1="110" y1="258" x2="130" y2="266" />
+                    <line x1="108" y1="264" x2="128" y2="270" />
+                    <line x1="108" y1="270" x2="124" y2="274" />
+                    {/* neck shadow vertical */}
+                    <line x1="116" y1="284" x2="120" y2="312" />
+                    <line x1="124" y1="284" x2="128" y2="312" />
+                    <line x1="132" y1="284" x2="134" y2="312" />
+                    <line x1="140" y1="286" x2="142" y2="310" />
+                    {/* forehead light hatch */}
+                    <line x1="86" y1="106" x2="94" y2="114" />
+                    <line x1="84" y1="114" x2="92" y2="120" />
+                    <line x1="84" y1="120" x2="90" y2="126" />
+                    {/* nose left side shadow */}
+                    <line x1="120" y1="172" x2="116" y2="180" />
+                    <line x1="120" y1="180" x2="116" y2="188" />
+                    <line x1="120" y1="186" x2="115" y2="194" />
+                  </g>
+
+                  <g class="ink">
+                    {/* hair — flowing calligraphic strands */}
+                    <path d="M 84 96 C 86 70, 92 54, 110 60" />
+                    <path d="M 92 88 C 96 62, 104 48, 122 56" />
+                    <path d="M 102 80 C 108 56, 118 42, 134 54" />
+                    <path d="M 116 72 C 124 50, 134 38, 148 52" />
+                    <path d="M 130 68 C 142 44, 152 38, 162 56" />
+                    <path d="M 144 64 C 156 46, 166 44, 174 64" />
+                    <path d="M 156 64 C 166 50, 172 50, 178 78" />
+                    <path d="M 96 76 C 102 64, 110 58, 118 62" />
+                    <path d="M 130 62 C 138 50, 146 46, 154 52" />
+                    {/* hairline */}
+                    <path d="M 80 96 Q 122 80 178 96" />
+                    {/* forehead furrow */}
+                    <path d="M 100 110 Q 122 106 144 110" />
+                    <path d="M 108 118 Q 122 116 138 118" />
+                    {/* face contour, single elegant curve each side */}
+                    <path d="M 80 96 Q 72 146 76 180 Q 84 222 102 242 Q 116 256 122 254" />
+                    <path d="M 178 96 Q 186 146 182 180 Q 174 222 156 242 Q 142 256 122 254" />
+                    {/* ears */}
+                    <path d="M 76 142 Q 68 160 78 180" />
+                    <path d="M 72 158 Q 76 164 78 168" />
+                    <path d="M 72 168 Q 76 172 80 174" />
+                    <path d="M 182 142 Q 190 160 180 180" />
+                    <path d="M 186 158 Q 182 164 180 168" />
+                    <path d="M 186 168 Q 182 172 178 174" />
+                    {/* nose — defined ridge, tip, nostrils */}
+                    <path d="M 124 152 Q 121 174 118 192" />
+                    <path d="M 118 192 Q 116 198 116 200 Q 124 206 134 202 Q 134 198 132 194" />
+                    <path d="M 116 200 Q 117 202 119 202" />
+                    <path d="M 132 200 Q 131 202 129 202" />
+                    {/* nasolabial folds */}
+                    <path d="M 134 202 Q 142 218 144 232" />
+                    <path d="M 116 202 Q 110 218 108 232" />
+                    {/* philtrum */}
+                    <path d="M 122 208 L 122 222" />
+                    {/* lower lip volume */}
+                    <path d="M 100 232 Q 124 238 148 232" />
+                    {/* chin */}
+                    <path d="M 116 260 Q 124 266 132 260" />
+                    {/* chin shadow line */}
+                    <path d="M 110 274 Q 124 278 138 274" />
+                    {/* neck */}
+                    <path d="M 100 276 L 92 314" />
+                    <path d="M 148 276 L 156 314" />
+                    {/* neck tendon */}
+                    <path d="M 124 286 Q 126 302 124 314" />
+                    {/* shirt collar — open with fabric folds */}
+                    <path d="M 36 338 L 84 312 L 110 326" />
+                    <path d="M 138 326 L 164 312 L 212 338" />
+                    <path d="M 86 318 Q 100 320 110 326" />
+                    <path d="M 138 326 Q 148 320 162 318" />
+                    {/* v-neck */}
+                    <path d="M 110 326 L 124 340" />
+                    <path d="M 138 326 L 124 340" />
+                  </g>
+
+                  <g class="ink-bold">
+                    {/* eyebrows — arched, right slightly lifted (alert) */}
+                    <path d="M 90 130 Q 104 122 118 126" />
+                    <path d="M 138 124 Q 152 120 164 126" />
+                    {/* upper eyelids — heaviest line */}
+                    <path d="M 92 144 Q 105 138 120 142" />
+                    <path d="M 138 142 Q 151 136 162 144" />
+                    {/* smile — upper lip line, the confident move */}
+                    <path d="M 96 226 Q 124 246 152 226" />
+                  </g>
+
+                  <g class="ink">
+                    {/* upper-lid fold (Moebius signature above the lid) */}
+                    <path d="M 95 140 Q 105 134 116 138" />
+                    <path d="M 140 138 Q 151 132 160 136" />
+                    {/* lower lids */}
+                    <path d="M 94 146 Q 105 152 118 146" />
+                    <path d="M 138 144 Q 151 150 162 144" />
+                    {/* iris circles */}
+                    <circle cx="106" cy="146" r="3.6" />
+                    <circle cx="150" cy="146" r="3.6" />
+                    {/* crow's feet outer corners */}
+                    <line x1="92" y1="142" x2="88" y2="140" />
+                    <line x1="92" y1="146" x2="88" y2="148" />
+                    <line x1="162" y1="142" x2="166" y2="140" />
+                    <line x1="162" y1="146" x2="166" y2="148" />
+                    <line x1="162" y1="148" x2="166" y2="150" />
+                    {/* inner corner tear-duct */}
+                    <line x1="120" y1="144" x2="122" y2="146" />
+                    <line x1="138" y1="144" x2="136" y2="146" />
+                    {/* mouth corner deepening */}
+                    <path d="M 96 226 Q 92 230 94 234" />
+                    <path d="M 152 226 Q 156 230 154 234" />
+                  </g>
+
+                  {/* pupils */}
+                  <circle class="ink-fill" cx="106" cy="146" r="1.5" />
+                  <circle class="ink-fill" cx="150" cy="146" r="1.5" />
+                  {/* urucum highlight on right iris (top-right of pupil) */}
+                  <circle class="urucum" cx="152" cy="143" r="1.1" />
+                </svg>
+              )}
+              {s.illustration === "mauro" && (
+                <svg viewBox="0 0 240 340">
+                  <g class="hatch">
+                    {/* right side of face (above beard) shadow */}
+                    <line x1="170" y1="156" x2="180" y2="162" />
+                    <line x1="170" y1="162" x2="180" y2="168" />
+                    <line x1="168" y1="168" x2="180" y2="174" />
+                    <line x1="168" y1="174" x2="180" y2="180" />
+                    <line x1="168" y1="180" x2="178" y2="186" />
+                    <line x1="166" y1="186" x2="178" y2="192" />
+                    <line x1="166" y1="192" x2="176" y2="198" />
+                    <line x1="164" y1="198" x2="174" y2="204" />
+                    <line x1="164" y1="204" x2="172" y2="208" />
+                    {/* right beard cross-hatch */}
+                    <line x1="146" y1="218" x2="158" y2="228" />
+                    <line x1="144" y1="226" x2="158" y2="236" />
+                    <line x1="144" y1="234" x2="156" y2="244" />
+                    <line x1="142" y1="242" x2="154" y2="252" />
+                    <line x1="142" y1="250" x2="152" y2="260" />
+                    <line x1="140" y1="258" x2="150" y2="266" />
+                    {/* under-eye/cheekbone shadow right */}
+                    <line x1="174" y1="142" x2="182" y2="148" />
+                    <line x1="174" y1="148" x2="184" y2="154" />
+                    {/* forehead worry lines hatch */}
+                    <line x1="86" y1="100" x2="92" y2="106" />
+                    <line x1="100" y1="98" x2="106" y2="104" />
+                    <line x1="116" y1="98" x2="122" y2="104" />
+                    {/* coat lapel right shadow */}
+                    <line x1="170" y1="298" x2="184" y2="310" />
+                    <line x1="168" y1="306" x2="182" y2="318" />
+                    <line x1="168" y1="314" x2="180" y2="324" />
+                  </g>
+
+                  <g class="ink">
+                    {/* thick hair combed back — 11 flowing strands */}
+                    <path d="M 78 80 C 84 56, 100 42, 116 50" />
+                    <path d="M 86 72 C 92 50, 108 36, 124 44" />
+                    <path d="M 94 64 C 102 42, 116 30, 134 44" />
+                    <path d="M 106 58 C 116 36, 128 24, 144 42" />
+                    <path d="M 118 56 C 130 36, 140 28, 152 46" />
+                    <path d="M 130 56 C 142 36, 152 32, 162 50" />
+                    <path d="M 142 58 C 152 40, 162 38, 170 56" />
+                    <path d="M 154 60 C 162 46, 170 46, 176 64" />
+                    <path d="M 162 66 C 170 56, 176 56, 180 76" />
+                    <path d="M 168 76 C 174 70, 180 68, 184 88" />
+                    <path d="M 90 78 C 96 64, 106 56, 116 60" />
+                    {/* hairline */}
+                    <path d="M 78 90 Q 122 74 184 90" />
+                    {/* forehead worry lines */}
+                    <path d="M 88 104 Q 122 96 168 104" />
+                    <path d="M 92 114 Q 122 108 158 114" />
+                    {/* face contour */}
+                    <path d="M 78 90 Q 68 142 76 174 Q 82 196 96 212" />
+                    <path d="M 184 90 Q 192 142 184 174 Q 176 196 162 212" />
+                    {/* ears */}
+                    <path d="M 74 138 Q 64 156 74 174" />
+                    <path d="M 70 156 Q 76 162 76 168" />
+                    <path d="M 188 138 Q 196 156 186 174" />
+                    <path d="M 192 156 Q 186 162 186 168" />
+                    {/* nose — defined ridge */}
+                    <path d="M 124 158 Q 120 184 116 198" />
+                    <path d="M 116 198 Q 114 202 116 204 Q 124 210 134 206 Q 134 202 132 198" />
+                    <path d="M 116 204 Q 117 206 120 206" />
+                    <path d="M 132 204 Q 131 206 128 206" />
+                    {/* nasolabial folds (above moustache) */}
+                    <path d="M 134 206 Q 142 214 146 220" />
+                    <path d="M 116 206 Q 110 214 106 220" />
+                    {/* mouth hint inside moustache */}
+                    <path d="M 110 218 Q 124 222 138 218" />
+                    {/* moustache — thicker, drooping */}
+                    <path d="M 90 212 Q 104 200 124 208" />
+                    <path d="M 124 208 Q 144 200 158 212" />
+                    <path d="M 90 212 Q 96 220 108 220" />
+                    <path d="M 158 212 Q 152 220 140 220" />
+                    {/* full beard outer contour */}
+                    <path d="M 84 216 Q 78 264 96 290 Q 110 304 124 304 Q 138 304 152 290 Q 170 264 164 216" />
+                    {/* beard strand lines (interior, indicating texture) */}
+                    <path d="M 92 232 Q 92 264 96 280" />
+                    <path d="M 102 240 Q 100 274 104 296" />
+                    <path d="M 114 246 Q 112 282 116 304" />
+                    <path d="M 124 250 L 124 304" />
+                    <path d="M 134 246 Q 136 282 132 304" />
+                    <path d="M 146 240 Q 148 274 144 296" />
+                    <path d="M 156 232 Q 156 264 152 280" />
+                    {/* neck */}
+                    <path d="M 102 304 L 96 326" />
+                    <path d="M 146 304 L 152 326" />
+                    {/* coat collar with lapel folds */}
+                    <path d="M 32 340 L 86 314 L 124 332 L 162 314 L 216 340" />
+                    <path d="M 108 332 L 124 340 L 140 332" />
+                    <path d="M 86 320 Q 102 322 110 328" />
+                    <path d="M 138 328 Q 146 322 162 320" />
+                    {/* arm hint right — sleeve seam */}
+                    <path d="M 196 332 L 220 326" />
+                  </g>
+
+                  <g class="ink-bold">
+                    {/* eyebrows — thick, slightly furrowed */}
+                    <path d="M 86 110 Q 102 104 120 110" />
+                    <path d="M 138 110 Q 156 104 172 110" />
+                    {/* heavy rectangular glasses — primary contour */}
+                    <rect x="82" y="120" width="38" height="28" rx="2" />
+                    <rect x="138" y="120" width="38" height="28" rx="2" />
+                    <path d="M 120 134 L 138 134" />
+                  </g>
+
+                  <g class="ink">
+                    {/* glasses inner detail (frame thickness suggestion) */}
+                    <path d="M 84 122 L 84 146" />
+                    <path d="M 118 122 L 118 146" />
+                    <path d="M 140 122 L 140 146" />
+                    <path d="M 174 122 L 174 146" />
+                    {/* glasses temple arms with hinge */}
+                    <path d="M 82 126 L 76 126 L 70 130" />
+                    <path d="M 176 126 L 182 126 L 188 130" />
+                    <line x1="80" y1="124" x2="80" y2="128" />
+                    <line x1="178" y1="124" x2="178" y2="128" />
+                    {/* eyes inside glasses — small almond with iris */}
+                    <path d="M 92 134 Q 102 130 112 134" />
+                    <path d="M 92 134 Q 102 138 112 134" />
+                    <path d="M 148 134 Q 158 130 168 134" />
+                    <path d="M 148 134 Q 158 138 168 134" />
+                    <circle cx="102" cy="134" r="2.6" />
+                    <circle cx="158" cy="134" r="2.6" />
+                  </g>
+
+                  {/* pupils */}
+                  <circle class="ink-fill" cx="102" cy="134" r="1.4" />
+                  <circle class="ink-fill" cx="158" cy="134" r="1.4" />
+
+                  {/* tool tip — ember urucum */}
+                  <circle class="urucum" cx="226" cy="324" r="3.4" />
+                  <circle class="urucum" cx="220" cy="316" r="1.5" />
+                  <circle class="urucum" cx="232" cy="316" r="1.2" />
+                </svg>
+              )}
+              {s.illustration === "erlon" && (
+                <svg viewBox="0 0 240 340">
+                  <g class="hatch">
+                    {/* bald skull dome shading top-right (dense) */}
+                    <line x1="138" y1="60" x2="148" y2="66" />
+                    <line x1="142" y1="68" x2="154" y2="74" />
+                    <line x1="146" y1="76" x2="158" y2="82" />
+                    <line x1="150" y1="84" x2="162" y2="90" />
+                    <line x1="152" y1="92" x2="164" y2="98" />
+                    <line x1="154" y1="100" x2="166" y2="106" />
+                    <line x1="156" y1="108" x2="166" y2="114" />
+                    {/* skull left light hatch */}
+                    <line x1="86" y1="92" x2="92" y2="98" />
+                    <line x1="84" y1="100" x2="90" y2="106" />
+                    {/* cheekbone right shadow */}
+                    <line x1="162" y1="170" x2="174" y2="178" />
+                    <line x1="160" y1="178" x2="174" y2="186" />
+                    <line x1="158" y1="186" x2="172" y2="194" />
+                    <line x1="156" y1="194" x2="170" y2="202" />
+                    <line x1="156" y1="202" x2="168" y2="208" />
+                    {/* beard right cross-hatch */}
+                    <line x1="148" y1="234" x2="160" y2="244" />
+                    <line x1="146" y1="244" x2="160" y2="254" />
+                    <line x1="146" y1="254" x2="158" y2="264" />
+                    <line x1="146" y1="264" x2="156" y2="274" />
+                    <line x1="146" y1="274" x2="154" y2="282" />
+                    {/* sleeve shadow */}
+                    <line x1="184" y1="232" x2="192" y2="226" />
+                    <line x1="186" y1="240" x2="194" y2="232" />
+                    <line x1="188" y1="248" x2="196" y2="240" />
+                    {/* under-eye shadows */}
+                    <line x1="92" y1="160" x2="98" y2="164" />
+                    <line x1="92" y1="166" x2="100" y2="170" />
+                    <line x1="138" y1="158" x2="146" y2="164" />
+                    <line x1="138" y1="164" x2="148" y2="170" />
+                  </g>
+
+                  <g class="ink">
+                    {/* bald skull — long oval, Moebius elongation */}
+                    <path d="M 80 110 Q 78 58 124 50 Q 170 58 168 110" />
+                    {/* skull crease (subtle midline) */}
+                    <path d="M 124 60 Q 124 80 124 96" />
+                    {/* face contour into beard */}
+                    <path d="M 80 110 Q 72 168 78 198 Q 86 224 102 236" />
+                    <path d="M 168 110 Q 176 168 170 198 Q 162 224 146 236" />
+                    {/* ears */}
+                    <path d="M 76 156 Q 66 174 78 192" />
+                    <path d="M 72 174 Q 78 178 78 184" />
+                    <path d="M 172 156 Q 182 174 170 192" />
+                    <path d="M 176 174 Q 170 178 170 184" />
+                    {/* deep wisdom forehead lines */}
+                    <path d="M 90 124 Q 124 116 158 124" />
+                    <path d="M 96 132 Q 124 126 152 132" />
+                    {/* nose — long defined ridge + nostrils */}
+                    <path d="M 124 152 Q 120 182 116 198" />
+                    <path d="M 116 198 Q 114 204 116 206 Q 124 212 134 208 Q 134 204 132 200" />
+                    <path d="M 116 206 Q 117 208 120 208" />
+                    <path d="M 132 206 Q 131 208 128 208" />
+                    {/* nasolabial folds */}
+                    <path d="M 134 208 Q 142 218 146 226" />
+                    <path d="M 116 208 Q 110 218 106 226" />
+                    {/* thick moustache flowing into beard */}
+                    <path d="M 86 220 Q 104 208 124 214 Q 144 208 162 220" />
+                    <path d="M 86 220 Q 92 230 106 230" />
+                    <path d="M 162 220 Q 156 230 142 230" />
+                    {/* mouth hint */}
+                    <path d="M 110 224 Q 124 228 138 224" />
+                    {/* full long beard outer contour */}
+                    <path d="M 82 224 Q 76 274 96 300 Q 112 314 124 314 Q 136 314 152 300 Q 172 274 166 224" />
+                    {/* beard strand interior lines */}
+                    <path d="M 88 244 Q 88 274 92 290" />
+                    <path d="M 96 252 Q 94 286 100 308" />
+                    <path d="M 106 258 Q 104 294 110 314" />
+                    <path d="M 116 262 L 116 314" />
+                    <path d="M 124 264 L 124 314" />
+                    <path d="M 132 262 L 132 314" />
+                    <path d="M 142 258 Q 144 294 138 314" />
+                    <path d="M 152 252 Q 154 286 148 308" />
+                    <path d="M 160 244 Q 160 274 156 290" />
+                    {/* raised right arm w/ sleeve fold lines */}
+                    <path d="M 170 240 Q 184 226 196 206 Q 208 184 216 162" />
+                    <path d="M 184 252 Q 196 232 208 210 Q 220 188 226 168" />
+                    <path d="M 188 240 Q 200 220 210 200" />
+                    {/* sleeve cuff */}
+                    <path d="M 216 162 L 222 158" />
+                    <path d="M 226 168 L 232 164" />
+                    <path d="M 218 154 Q 224 156 228 162" />
+                    {/* hand: open palm with 5 fingers */}
+                    <path d="M 222 158 Q 218 148 216 138" />
+                    <path d="M 222 152 Q 220 142 222 132" />
+                    <path d="M 226 152 Q 226 142 230 134" />
+                    <path d="M 228 156 Q 232 148 236 142" />
+                    <path d="M 230 162 Q 236 158 240 154" />
+                    <path d="M 220 162 Q 224 160 228 156" />
+                    {/* robe shoulders */}
+                    <path d="M 28 340 Q 56 308 96 308" />
+                    <path d="M 152 308 Q 192 308 220 340" />
+                    <path d="M 152 296 L 124 322 L 96 296" />
+                    {/* robe fold lines */}
+                    <path d="M 76 320 Q 84 326 92 326" />
+                    <path d="M 162 326 Q 170 326 180 320" />
+                  </g>
+
+                  <g class="ink-bold">
+                    {/* eyebrows — strong, slightly drawn together */}
+                    <path d="M 90 142 Q 104 134 118 140" />
+                    <path d="M 130 140 Q 144 134 158 142" />
+                    {/* upper eyelids */}
+                    <path d="M 92 154 Q 105 148 118 152" />
+                    <path d="M 130 152 Q 143 148 156 154" />
+                  </g>
+
+                  <g class="ink">
+                    {/* upper-lid fold above each eye */}
+                    <path d="M 95 150 Q 105 144 116 148" />
+                    <path d="M 132 148 Q 143 144 154 150" />
+                    {/* lower lids */}
+                    <path d="M 94 156 Q 105 162 118 156" />
+                    <path d="M 130 156 Q 143 162 156 156" />
+                    {/* iris circles */}
+                    <circle cx="106" cy="155" r="3.6" />
+                    <circle cx="144" cy="155" r="3.6" />
+                    {/* crow's feet */}
+                    <line x1="92" y1="152" x2="88" y2="150" />
+                    <line x1="92" y1="156" x2="88" y2="158" />
+                    <line x1="156" y1="152" x2="160" y2="150" />
+                    <line x1="156" y1="156" x2="160" y2="158" />
+                  </g>
+
+                  <circle class="ink-fill" cx="106" cy="155" r="1.5" />
+                  <circle class="ink-fill" cx="144" cy="155" r="1.5" />
+
+                  {/* urucum data sparks in spiral */}
+                  <circle class="urucum" cx="220" cy="124" r="2.7" />
+                  <circle class="urucum" cx="208" cy="104" r="2.1" />
+                  <circle class="urucum" cx="228" cy="100" r="1.7" />
+                  <circle class="urucum" cx="194" cy="116" r="1.9" />
+                  <circle class="urucum" cx="222" cy="142" r="1.5" />
+                  <circle class="urucum" cx="200" cy="86" r="1.7" />
+                  <circle class="urucum" cx="216" cy="78" r="1.4" />
+                  <circle class="urucum" cx="232" cy="116" r="1.4" />
+                  <circle class="urucum" cx="184" cy="100" r="1.3" />
+                </svg>
+              )}
+            </div>
+
+            <p class="mt-[20px] body-sm" style="letter-spacing: 0.04em; text-transform: uppercase; color: var(--ink-soft);">
               {s.papel}
             </p>
             <h3 class="mt-[6px] h3" style="font-weight: 600;">
               {s.apelido ? `${s.nome} · "${s.apelido}"` : s.nome}
             </h3>
-            <p class="mt-[16px] body">{s.bio}</p>
+            <p class="mt-[14px] body" style="max-width: 28ch;">{s.bio}</p>
             <p class="mt-[16px] body-sm">
               <a class="link-editorial" href={s.linkedin} target="_blank" rel="noopener">LinkedIn</a>
             </p>
@@ -118,3 +545,44 @@ const roles: Role[] = [
     </ul>
   </div>
 </section>
+
+<style>
+  .founder-illustration {
+    width: clamp(196px, 20vw, 260px);
+    color: var(--ink);
+  }
+  .founder-illustration svg .ink {
+    stroke: currentColor;
+    stroke-width: 0.9;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+  .founder-illustration svg .ink-bold {
+    stroke: currentColor;
+    stroke-width: 1.25;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+  .founder-illustration svg .hatch {
+    stroke: currentColor;
+    stroke-width: 0.42;
+    fill: none;
+    stroke-linecap: round;
+    opacity: 0.55;
+  }
+  .founder-illustration svg .ink-fill {
+    fill: currentColor;
+    stroke: none;
+  }
+  .founder-illustration svg .urucum {
+    fill: #C25E3A;
+    stroke: none;
+  }
+  .founder-illustration svg {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+</style>

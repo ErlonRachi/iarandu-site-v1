@@ -424,14 +424,13 @@ body {
   font-weight: 400;
   white-space: nowrap;
   opacity: 0;
-  transform: translateY(10px) translateX(var(--dx, 0));
-  transition:
-    opacity 1200ms var(--ease),
-    transform 1200ms var(--ease);
+  filter: blur(2.4px);
+  transition: opacity 1500ms var(--ease);
   transition-delay: calc(var(--i, 0) * 70ms);
-  letter-spacing: 0.005em;
+  letter-spacing: -0.01em;
   color: var(--ink);
-  will-change: opacity, transform;
+  transform: rotate(var(--rotate, 0deg));
+  will-change: opacity, transform, filter;
 }
 
 .role-word.role-ai {
@@ -441,7 +440,16 @@ body {
 
 .role-cloud.is-in .role-word {
   opacity: var(--alpha, 0.3);
-  transform: translateY(0) translateX(0);
+  animation: roleDrift 26s ease-in-out infinite;
+  animation-delay: calc(var(--i, 0) * -1.55s);
+}
+
+@keyframes roleDrift {
+  0%   { transform: rotate(var(--rotate, 0deg)) translate(0, 0); }
+  25%  { transform: rotate(var(--rotate, 0deg)) translate(14px, -10px); }
+  50%  { transform: rotate(var(--rotate, 0deg)) translate(-8px, 6px); }
+  75%  { transform: rotate(var(--rotate, 0deg)) translate(10px, 14px); }
+  100% { transform: rotate(var(--rotate, 0deg)) translate(0, 0); }
 }
 
 /* Ambient curve background — sits inside dark sections, drawn once */
@@ -482,11 +490,12 @@ body {
     transition: none;
   }
   .role-word {
-    transform: none;
+    transform: rotate(var(--rotate, 0deg));
     transition: opacity 250ms linear;
     transition-delay: 0ms;
+    filter: blur(1.5px);
   }
-  .role-cloud.is-in .role-word { transform: none; }
+  .role-cloud.is-in .role-word { animation: none; }
   .logo-bloom .orbit,
   .logo-bloom .nucleus,
   .logo-bloom .planet,

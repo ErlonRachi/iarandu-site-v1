@@ -1,36 +1,73 @@
 ---
-// Section 1 — Hero. Drenched azul-nanquim-deep. Keyword: "fila" (urucum).
-import Logo from "../Logo.astro";
+// Section 1 — Hero. Drenched azul-nanquim-deep. Keyword: "bandwidth" (urucum).
 ---
 
-<section class="surface-1 section-pad" aria-labelledby="hero-title">
+<section id="topo" class="surface-1 section-pad" aria-labelledby="hero-title">
   <div class="container-editorial">
-    <header class="flex items-center justify-between mb-[88px] md:mb-[144px]">
-      <a
-        href="#topo"
-        id="topo"
-        aria-label="Iarandu — início"
-        style="color: var(--ink); display: inline-flex;"
-      >
-        <Logo variant="full" width={170} animate={true} />
-      </a>
-      <a href="#vamos" class="link-editorial" style="font-size: 14px; letter-spacing: 0.04em; text-transform: uppercase;">
-        vamos.
-      </a>
-    </header>
-
-    <h1 id="hero-title" class="display-xl" data-words style="max-width: 18ch;">
-      Construímos a camada de IA que sua área de negócio precisa, sem entrar na <span class="accent-urucum">fila</span> da TI.
+    <h1 id="hero-title" class="display-xl" data-words style="max-width: 20ch;">
+      Construímos a camada de IA que sua área de negócio precisa. Sem competir pela <span class="accent-urucum">bandwidth</span> da sua TI.
     </h1>
 
     <div
-      class="reveal mt-[48px] md:mt-[64px] flex flex-col md:flex-row md:items-end md:justify-between gap-[40px]"
-      style="transition-delay: 200ms;"
+      class="reveal mt-[64px] md:mt-[96px] grid grid-cols-1 md:grid-cols-[1.618fr_1fr] gap-[40px] md:gap-[72px] items-end"
+      style="transition-delay: 220ms;"
     >
-      <p class="body-lg measure-tight">
-        Em parceria com a TI da empresa. Seguindo os padrões dela. Saímos do orçamento da área de negócio.
+      <p class="body-lg measure-tight" style="margin: 0;">
+        Somos a força auxiliar da sua área de tecnologia. Seguimos seus padrões e adicionamos a camada de IA que resolve sua dor.
       </p>
-      <a href="#vamos" class="link-urucum body-lg" style="white-space: nowrap;">começar pelo diagnóstico →</a>
+      <a href="#vamos" class="link-cta-hero">
+        converse com a gente sobre o problema que quer resolver
+        <span aria-hidden="true" class="link-cta-hero__arrow">→</span>
+      </a>
     </div>
   </div>
 </section>
+
+<style>
+  .link-cta-hero {
+    display: inline-block;
+    color: var(--urucum-fresh);
+    text-decoration: none;
+    font-size: clamp(17px, 1.35vw, 19px);
+    line-height: 1.45;
+    letter-spacing: -0.005em;
+    background-image: linear-gradient(currentColor, currentColor);
+    background-size: 0% 1px;
+    background-repeat: no-repeat;
+    background-position: 0 100%;
+    padding-bottom: 3px;
+    transition:
+      background-size 320ms var(--ease),
+      color 220ms var(--ease);
+  }
+  .link-cta-hero::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    background: currentColor;
+    opacity: 0.55;
+    margin-bottom: 14px;
+    transform-origin: 0 50%;
+    transform: scaleX(1);
+  }
+  .link-cta-hero__arrow {
+    display: inline-block;
+    margin-left: 6px;
+    transition: transform 280ms var(--ease);
+    will-change: transform;
+  }
+  .link-cta-hero:hover,
+  .link-cta-hero:focus-visible {
+    color: var(--urucum);
+    background-size: 100% 1px;
+  }
+  .link-cta-hero:hover .link-cta-hero__arrow,
+  .link-cta-hero:focus-visible .link-cta-hero__arrow {
+    transform: translateX(5px);
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .link-cta-hero,
+    .link-cta-hero__arrow { transition: none; }
+  }
+</style>
