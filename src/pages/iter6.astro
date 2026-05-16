@@ -1,15 +1,6 @@
 ---
-// / — production. Promoted from /iter6 (v6) on 2026-05-16.
-//
-// History of iteration:
-//   - / (v1)  → snapshot preserved as index.v1.astro
-//   - /iter   → working scratch (v2/v3-era)
-//   - /iter3  → locked v3 snapshot (pre-1ª-crítica)
-//   - /iter4  → v4 (9 fixes da 1ª crítica)
-//   - /iter5  → v5 patch (P0 mailto + P1 Trilha + Cases CTA como botão) — snapshot preserved as index.v5.astro
-//   - /iter6  → v6 (PosicaoTI copy refresh: aliados/resolvemos/satisfeito tri-accent)
-//
-// Production now mirrors /iter6. Future iterations should branch as /iter7 etc.
+// /iter6 — v5 com PosicaoTI.v5 (copy reescrita + tri-accent aliados/resolvemos/satisfeito).
+// Diff vs iter5: troca PosicaoTI.v4 → PosicaoTI.v5. Resto idêntico.
 import LayoutIter5 from "../layouts/LayoutIter5.astro";
 import Hero from "../components/sections/Hero.v4.astro";
 import Tese from "../components/sections/Tese.astro";
@@ -23,7 +14,9 @@ import Fechamento from "../components/sections/Fechamento.v5.astro";
 import Footer from "../components/sections/Footer.v5.astro";
 ---
 
-<LayoutIter5 noindex={false}>
+<LayoutIter5
+  title="Iarandu — v6 (PosicaoTI copy refresh)"
+>
   <main>
     <Hero />
     <Tese />
