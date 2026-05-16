@@ -1,0 +1,327 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-05-16T10:06:58Z",
+  "title": "Design System: Iarandu",
+  "extensions": {
+    "colorMeta": {
+      "papel-cream": {
+        "role": "neutral",
+        "displayName": "Papel-cream (Nuvem)",
+        "canonical": "oklch(94% 0.018 85)",
+        "tonalRamp": [
+          "oklch(20% 0.010 85)",
+          "oklch(32% 0.014 85)",
+          "oklch(46% 0.016 85)",
+          "oklch(60% 0.018 85)",
+          "oklch(72% 0.018 85)",
+          "oklch(82% 0.018 85)",
+          "oklch(94% 0.018 85)",
+          "oklch(98% 0.010 85)"
+        ]
+      },
+      "papel-soft": {
+        "role": "neutral",
+        "displayName": "Papel-soft",
+        "canonical": "oklch(96% 0.014 85)"
+      },
+      "verde-musgo": {
+        "role": "neutral",
+        "displayName": "Verde-musgo (Floresta)",
+        "canonical": "oklch(28% 0.025 145)",
+        "tonalRamp": [
+          "oklch(12% 0.012 145)",
+          "oklch(18% 0.020 145)",
+          "oklch(22% 0.024 145)",
+          "oklch(28% 0.025 145)",
+          "oklch(38% 0.024 145)",
+          "oklch(52% 0.022 145)",
+          "oklch(70% 0.018 145)",
+          "oklch(88% 0.012 145)"
+        ]
+      },
+      "verde-musgo-deep": {
+        "role": "neutral",
+        "displayName": "Verde-musgo-deep",
+        "canonical": "oklch(22% 0.022 145)"
+      },
+      "azul-nanquim": {
+        "role": "neutral",
+        "displayName": "Azul-nanquim (Rio)",
+        "canonical": "oklch(28% 0.030 245)",
+        "tonalRamp": [
+          "oklch(10% 0.018 245)",
+          "oklch(14% 0.024 245)",
+          "oklch(18% 0.028 245)",
+          "oklch(22% 0.030 245)",
+          "oklch(28% 0.030 245)",
+          "oklch(40% 0.028 245)",
+          "oklch(58% 0.022 245)",
+          "oklch(82% 0.014 245)"
+        ]
+      },
+      "azul-nanquim-deep": {
+        "role": "neutral",
+        "displayName": "Azul-nanquim-deep (fundo padrão da página)",
+        "canonical": "oklch(20% 0.028 245)"
+      },
+      "azul-nanquim-deeper": {
+        "role": "neutral",
+        "displayName": "Azul-nanquim-deeper (fundo do fechamento)",
+        "canonical": "oklch(16% 0.024 245)"
+      },
+      "azul-header": {
+        "role": "neutral",
+        "displayName": "Azul-header (com blur + 88% alpha)",
+        "canonical": "oklch(17% 0.024 240)"
+      },
+      "azul-card": {
+        "role": "neutral",
+        "displayName": "Azul-card (fundo das células de case)",
+        "canonical": "oklch(21% 0.028 245)"
+      },
+      "linha-azul-strong": {
+        "role": "neutral",
+        "displayName": "Linha-azul (divisores)",
+        "canonical": "oklch(26% 0.030 245)"
+      },
+      "urucum": {
+        "role": "primary",
+        "displayName": "Urucum (Pigmento Bixa orellana)",
+        "canonical": "oklch(57% 0.130 35)",
+        "tonalRamp": [
+          "oklch(20% 0.04 35)",
+          "oklch(30% 0.07 35)",
+          "oklch(40% 0.10 35)",
+          "oklch(50% 0.12 35)",
+          "oklch(57% 0.130 35)",
+          "oklch(68% 0.115 35)",
+          "oklch(80% 0.085 35)",
+          "oklch(92% 0.040 35)"
+        ]
+      },
+      "urucum-fresh": {
+        "role": "primary",
+        "displayName": "Urucum-fresh (hover/focus)",
+        "canonical": "oklch(60% 0.135 35)"
+      },
+      "azul-ceu": {
+        "role": "tertiary",
+        "displayName": "Azul-céu (atmosférico)",
+        "canonical": "oklch(74% 0.060 230)",
+        "tonalRamp": [
+          "oklch(22% 0.020 230)",
+          "oklch(34% 0.030 230)",
+          "oklch(46% 0.040 230)",
+          "oklch(58% 0.050 230)",
+          "oklch(74% 0.060 230)",
+          "oklch(84% 0.045 230)",
+          "oklch(92% 0.025 230)",
+          "oklch(98% 0.010 230)"
+        ]
+      },
+      "verde-folha": {
+        "role": "tertiary",
+        "displayName": "Verde-folha (botânico claro)",
+        "canonical": "oklch(76% 0.060 140)",
+        "tonalRamp": [
+          "oklch(20% 0.020 140)",
+          "oklch(34% 0.030 140)",
+          "oklch(48% 0.045 140)",
+          "oklch(62% 0.055 140)",
+          "oklch(76% 0.060 140)",
+          "oklch(84% 0.045 140)",
+          "oklch(92% 0.025 140)",
+          "oklch(98% 0.010 140)"
+        ]
+      },
+      "ouro": {
+        "role": "secondary",
+        "displayName": "Ouro (pigmento institucional)",
+        "canonical": "oklch(74% 0.075 80)",
+        "tonalRamp": [
+          "oklch(22% 0.025 80)",
+          "oklch(36% 0.040 80)",
+          "oklch(50% 0.058 80)",
+          "oklch(62% 0.070 80)",
+          "oklch(74% 0.075 80)",
+          "oklch(84% 0.060 80)",
+          "oklch(92% 0.035 80)",
+          "oklch(98% 0.015 80)"
+        ]
+      },
+      "ouro-fresh": {
+        "role": "secondary",
+        "displayName": "Ouro-fresh (hover)",
+        "canonical": "oklch(78% 0.075 80)"
+      },
+      "ink-muted-cool": {
+        "role": "neutral",
+        "displayName": "Ink-muted-cool (texto secundário frio)",
+        "canonical": "oklch(62% 0.020 230)"
+      }
+    },
+    "typographyMeta": {
+      "display-xl": { "displayName": "Display XL — Fraunces 700, opsz 144", "purpose": "Hero (seção 1) e Fechamento (seção 10). Cerimonial. Aparece duas vezes na página." },
+      "display-lg": { "displayName": "Display LG — Fraunces 700, opsz 144", "purpose": "Manifesto da seção 9 (a palavra arandu). Aparece uma vez." },
+      "display-md": { "displayName": "Display MD — Fraunces 700, opsz 144", "purpose": "Tese central (seção 2) e abertura da seção 7." },
+      "display-sm": { "displayName": "Display SM — Fraunces 700, opsz 96", "purpose": "Nome de caso em destaque, CTA intermediário pós-cases, blocos curtos de manifesto." },
+      "headline": { "displayName": "Headline — Inter Tight 600", "purpose": "Títulos de seção em modo Linear (<h2>)." },
+      "title": { "displayName": "Title — Inter Tight 500", "purpose": "Subtítulos, nome de caso fora do destaque, mini-bio dos sócios." },
+      "body-lg": { "displayName": "Body LG — Inter Tight 400", "purpose": "Manifesto e descrições principais. Cor ink-soft (78% alpha)." },
+      "body": { "displayName": "Body — Inter Tight 400", "purpose": "Default. Cor ink-soft (78% alpha)." },
+      "body-sm": { "displayName": "Body SM — Inter Tight 400", "purpose": "Notas, legendas, copyright, footer. Cor ink-muted (55% alpha)." },
+      "label": { "displayName": "Label — Inter Tight 500 uppercase", "purpose": "Eyebrow das células de case, labels do formulário. Cor ink-muted." }
+    },
+    "shadows": [
+      {
+        "name": "header-blur",
+        "value": "backdrop-filter: blur(12px); background: rgba(11, 23, 32, 0.88)",
+        "purpose": "Único 'elevação' do sistema. Aplicado ao sticky header. Não é box-shadow — é blur óptico de profundidade física."
+      },
+      {
+        "name": "focus-outline",
+        "value": "outline: 2px solid var(--urucum-fresh); outline-offset: 3px",
+        "purpose": "Estado :focus-visible global. Sem glow, sem ring colorido — outline editorial firme."
+      }
+    ],
+    "motion": [
+      { "name": "ease-quart", "value": "cubic-bezier(0.22, 1, 0.36, 1)", "purpose": "Curva única de motion do sistema. ease-out-quart. Banidos: bouncy, elastic, spring com overshoot." },
+      { "name": "duration-hover", "value": "180ms", "purpose": "State change rápido (hover, focus). Cor muda, geometria não." },
+      { "name": "duration-arrow", "value": "220ms", "purpose": "Deslocamento da seta `→` no hover dos link-CTAs (+3 a +5px no eixo X)." },
+      { "name": "duration-reveal", "value": "1100ms", "purpose": "Reveal padrão de elementos ao entrar em viewport. Opacity + translateY(16px → 0) + scale(0.992 → 1)." },
+      { "name": "duration-word", "value": "900ms", "purpose": "Reveal por palavra (data-words). Stagger de 65ms por palavra. Translate Y + leve rotate." },
+      { "name": "duration-curve-draw", "value": "2200ms", "purpose": "Stroke-dashoffset 100 → 0 nos SVGs de curva logarítmica e rio. Delay de 280ms." },
+      { "name": "duration-logo-bloom", "value": "~3000ms total", "purpose": "Coreografia do logo: órbitas desenham, núcleo blooma, planeta chega, wordmark assenta, tittle e período aparecem. Executa uma vez." }
+    ],
+    "breakpoints": [
+      { "name": "xs-collapse", "value": "380px" },
+      { "name": "md", "value": "768px" },
+      { "name": "lg-case", "value": "900px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary CTA Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "CTA principal do form de fechamento. Urucum sobre nanquim. Texto literal 'vamos.' com ponto final. Sem ícone, sem seta — só cor muda no hover.",
+      "html": "<button class=\"ds-btn-primary\">vamos.</button>",
+      "css": ".ds-btn-primary { display: inline-block; background: var(--urucum, #C25E3A); color: var(--ink, #F1ECE0); padding: 18px 32px; border: 0; border-radius: 2px; font-family: 'Inter Tight', system-ui, sans-serif; font-weight: 500; font-size: 17px; letter-spacing: 0.005em; cursor: pointer; transition: background-color 180ms cubic-bezier(0.22, 1, 0.36, 1); } .ds-btn-primary:hover, .ds-btn-primary:focus-visible { background: var(--urucum-fresh, #D6663A); }"
+    },
+    {
+      "name": "Ghost Gold CTA",
+      "kind": "button",
+      "refersTo": "button-ghost-gold",
+      "description": "CTA secundário do header sticky e do bloco pós-cases. Transparente com borda ouro a 35% alpha. Seta desliza +3px no hover. Em telas <380px, texto colapsa, só a seta permanece.",
+      "html": "<a href=\"#\" class=\"ds-btn-ghost-gold\"><span class=\"ds-btn-ghost-gold__text\">fale com a gente</span><span class=\"ds-btn-ghost-gold__arrow\" aria-hidden=\"true\">→</span></a>",
+      "css": ".ds-btn-ghost-gold { display: inline-flex; align-items: center; gap: 8px; color: var(--ouro, #C8A96E); text-decoration: none; font-family: 'Inter Tight', system-ui, sans-serif; font-size: 13px; font-weight: 500; letter-spacing: 0.005em; padding: 7px 18px; border: 1px solid rgba(200, 169, 110, 0.35); border-radius: 2px; background: transparent; transition: background-color 180ms cubic-bezier(0.22, 1, 0.36, 1), border-color 180ms cubic-bezier(0.22, 1, 0.36, 1); white-space: nowrap; } .ds-btn-ghost-gold:hover, .ds-btn-ghost-gold:focus-visible { background: rgba(200, 169, 110, 0.10); border-color: rgba(200, 169, 110, 0.55); } .ds-btn-ghost-gold__arrow { display: inline-block; transition: transform 220ms cubic-bezier(0.22, 1, 0.36, 1); } .ds-btn-ghost-gold:hover .ds-btn-ghost-gold__arrow, .ds-btn-ghost-gold:focus-visible .ds-btn-ghost-gold__arrow { transform: translateX(3px); }"
+    },
+    {
+      "name": "Hero Link CTA",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Link-CTA do hero. Cor urucum-fresh, com uma linha decorativa de 1px sempre presente acima do texto e underline que cresce 0% → 100% no hover. Seta desliza +5px.",
+      "html": "<a href=\"#\" class=\"ds-link-cta-hero\">converse com a gente sobre o problema que quer resolver<span class=\"ds-link-cta-hero__arrow\" aria-hidden=\"true\">→</span></a>",
+      "css": ".ds-link-cta-hero { display: inline-block; color: var(--urucum-fresh, #D6663A); text-decoration: none; font-family: 'Inter Tight', system-ui, sans-serif; font-size: clamp(17px, 1.35vw, 19px); line-height: 1.45; letter-spacing: -0.005em; background-image: linear-gradient(currentColor, currentColor); background-size: 0% 1px; background-repeat: no-repeat; background-position: 0 100%; padding-bottom: 3px; transition: background-size 320ms cubic-bezier(0.22, 1, 0.36, 1), color 220ms cubic-bezier(0.22, 1, 0.36, 1); } .ds-link-cta-hero::before { content: ''; display: block; width: 100%; height: 1px; background: currentColor; opacity: 0.55; margin-bottom: 14px; } .ds-link-cta-hero__arrow { display: inline-block; margin-left: 6px; transition: transform 280ms cubic-bezier(0.22, 1, 0.36, 1); } .ds-link-cta-hero:hover, .ds-link-cta-hero:focus-visible { color: var(--urucum, #C25E3A); background-size: 100% 1px; } .ds-link-cta-hero:hover .ds-link-cta-hero__arrow, .ds-link-cta-hero:focus-visible .ds-link-cta-hero__arrow { transform: translateX(5px); }"
+    },
+    {
+      "name": "Status Pill — Em Andamento",
+      "kind": "chip",
+      "refersTo": "pill-status-andamento",
+      "description": "Pill informacional para casos em curso. Ouro com 10% bg. Pílula 999px. Estática — não anima, não muda no hover.",
+      "html": "<span class=\"ds-pill-andamento\">em andamento</span>",
+      "css": ".ds-pill-andamento { display: inline-block; padding: 5px 14px; border-radius: 999px; font-family: 'Inter Tight', system-ui, sans-serif; font-size: 11px; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; line-height: 1.4; color: var(--ouro, #C8A96E); background: rgba(200, 169, 110, 0.10); border: 1px solid rgba(200, 169, 110, 0.32); }"
+    },
+    {
+      "name": "Status Pill — Entregue",
+      "kind": "chip",
+      "refersTo": "pill-status-entregue",
+      "description": "Pill informacional para casos com entrega concluída. Verde-folha com 10% bg.",
+      "html": "<span class=\"ds-pill-entregue\">plano entregue</span>",
+      "css": ".ds-pill-entregue { display: inline-block; padding: 5px 14px; border-radius: 999px; font-family: 'Inter Tight', system-ui, sans-serif; font-size: 11px; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; line-height: 1.4; color: var(--verde-folha, #8FBE92); background: rgba(143, 190, 146, 0.10); border: 1px solid rgba(143, 190, 146, 0.32); }"
+    },
+    {
+      "name": "Ghost Input (Form Fechamento)",
+      "kind": "input",
+      "refersTo": "input-underline",
+      "description": "Input fantasma do form de fechamento. Background transparente, apenas border-bottom 1px em papel-cream a 18% alpha. Label uppercase acima (nunca placeholder-as-label).",
+      "html": "<div class=\"ds-input-group\"><label for=\"ds-input-nome\" class=\"ds-input-label\">nome</label><input id=\"ds-input-nome\" class=\"ds-input-underline\" type=\"text\" placeholder=\"\" /></div>",
+      "css": ".ds-input-group { display: flex; flex-direction: column; } .ds-input-label { font-family: 'Inter Tight', system-ui, sans-serif; font-size: 14px; font-weight: 400; letter-spacing: 0.04em; text-transform: uppercase; color: rgba(241, 236, 224, 0.55); margin-bottom: 10px; } .ds-input-underline { background: transparent; border: 0; border-bottom: 1px solid rgba(241, 236, 224, 0.18); padding: 12px 0; font-family: 'Inter Tight', system-ui, sans-serif; font-size: 18px; color: var(--ink, #F1ECE0); outline: none; width: 100%; transition: border-color 180ms cubic-bezier(0.22, 1, 0.36, 1); } .ds-input-underline:focus-visible { outline: 2px solid var(--urucum-fresh, #D6663A); outline-offset: 3px; border-bottom-color: var(--ink, #F1ECE0); }"
+    },
+    {
+      "name": "Case Row",
+      "kind": "card",
+      "refersTo": "card-case",
+      "description": "Row de case em grid 4 colunas no desktop (identidade | problema | decisão | status). Bg azul-card sobre surface-2. Separadores 1px linha-azul-strong via border-left. Cantos retos. Mobile colapsa para 1 coluna.",
+      "html": "<article class=\"ds-case-row\"><div class=\"ds-case-cell\"><h3 class=\"ds-case-title\">Software house brasileira</h3><p class=\"ds-case-eyebrow\">ERP empresarial · líder de mercado nacional</p><ul class=\"ds-case-meta\"><li>· +12.000 funcionários</li><li>· +70.000 clientes corporativos</li><li>· Capital aberto na B3</li></ul></div><div class=\"ds-case-cell\"><p class=\"ds-case-eyebrow\">problema</p><p class=\"ds-case-body\">Mapeamento de especificações em escala, sem detecção de anomalias.</p></div><div class=\"ds-case-cell\"><p class=\"ds-case-eyebrow\">decisão</p><p class=\"ds-case-body\">IA na ordenação do fluxo de desenvolvimento e implementação.</p></div><div class=\"ds-case-cell ds-case-status\"><p class=\"ds-case-eyebrow\">status</p><span class=\"ds-pill-andamento\">em andamento</span></div></article>",
+      "css": ".ds-case-row { display: grid; grid-template-columns: 1.6fr 1.4fr 1.4fr 0.8fr; background: var(--azul-card, #132030); color: var(--ink, #F1ECE0); padding: 36px 32px; gap: 0; } .ds-case-cell { display: flex; flex-direction: column; } .ds-case-cell + .ds-case-cell { border-left: 1px solid var(--linha-azul-strong, #1E3348); padding-left: 28px; margin-left: 28px; } .ds-case-title { font-family: 'Fraunces', Georgia, serif; font-weight: 700; font-size: clamp(26px, 2.8vw, 40px); line-height: 1.18; letter-spacing: -0.012em; font-variation-settings: 'opsz' 96, 'SOFT' 30; margin: 0; } .ds-case-eyebrow { font-family: 'Inter Tight', system-ui, sans-serif; font-size: 11px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(241, 236, 224, 0.55); margin: 0; } .ds-case-body { font-family: 'Inter Tight', system-ui, sans-serif; font-size: 17px; line-height: 1.66; color: rgba(241, 236, 224, 0.78); margin: 10px 0 0 0; } .ds-case-meta { list-style: none; padding: 0; margin: 20px 0 0 0; font-family: 'Inter Tight', system-ui, sans-serif; font-size: 14px; color: rgba(241, 236, 224, 0.55); display: flex; flex-direction: column; gap: 6px; } .ds-case-status { align-items: flex-end; text-align: right; } .ds-pill-andamento { display: inline-block; margin-top: 10px; padding: 5px 14px; border-radius: 999px; font-family: 'Inter Tight', system-ui, sans-serif; font-size: 11px; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; line-height: 1.4; color: var(--ouro, #C8A96E); background: rgba(200, 169, 110, 0.10); border: 1px solid rgba(200, 169, 110, 0.32); } @media (max-width: 900px) { .ds-case-row { grid-template-columns: 1fr; padding: 28px 24px; gap: 28px; } .ds-case-cell + .ds-case-cell { border-left: 0; padding-left: 0; margin-left: 0; } .ds-case-status { align-items: flex-start; text-align: left; } }"
+    },
+    {
+      "name": "Sticky Header",
+      "kind": "nav",
+      "refersTo": "sticky-header",
+      "description": "Header sticky de 50px com blur(12px) sobre azul-header a 88% alpha. Logo em Fraunces com ponto urucum. CTA ghost-gold à direita. Após 10px de scroll, surge border-bottom linha-azul-strong.",
+      "html": "<header class=\"ds-sticky-header is-scrolled\"><div class=\"ds-sticky-header__inner\"><a href=\"#\" class=\"ds-sticky-logo\">iarandu<span class=\"ds-sticky-logo__dot\">.</span></a><a href=\"#\" class=\"ds-btn-ghost-gold\"><span class=\"ds-btn-ghost-gold__text\">fale com a gente</span><span class=\"ds-btn-ghost-gold__arrow\" aria-hidden=\"true\">→</span></a></div></header>",
+      "css": ".ds-sticky-header { position: sticky; top: 0; z-index: 100; height: 50px; background: rgba(11, 23, 32, 0.88); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid transparent; transition: border-color 220ms cubic-bezier(0.22, 1, 0.36, 1), background-color 220ms cubic-bezier(0.22, 1, 0.36, 1); } .ds-sticky-header.is-scrolled { border-bottom-color: var(--linha-azul-strong, #1E3348); background: rgba(11, 23, 32, 0.92); } .ds-sticky-header__inner { max-width: 76rem; margin-inline: auto; height: 100%; padding-inline: 56px; display: flex; align-items: center; justify-content: space-between; } .ds-sticky-logo { font-family: 'Fraunces', Georgia, serif; font-weight: 600; font-size: 18px; color: var(--ink, #F1ECE0); text-decoration: none; letter-spacing: -0.015em; line-height: 1; font-variation-settings: 'opsz' 96, 'SOFT' 30; } .ds-sticky-logo__dot { color: var(--urucum, #C25E3A); } .ds-btn-ghost-gold { display: inline-flex; align-items: center; gap: 8px; color: var(--ouro, #C8A96E); text-decoration: none; font-family: 'Inter Tight', system-ui, sans-serif; font-size: 13px; font-weight: 500; letter-spacing: 0.005em; padding: 7px 18px; border: 1px solid rgba(200, 169, 110, 0.35); border-radius: 2px; background: transparent; transition: background-color 180ms cubic-bezier(0.22, 1, 0.36, 1), border-color 180ms cubic-bezier(0.22, 1, 0.36, 1); white-space: nowrap; } .ds-btn-ghost-gold:hover, .ds-btn-ghost-gold:focus-visible { background: rgba(200, 169, 110, 0.10); border-color: rgba(200, 169, 110, 0.55); } .ds-btn-ghost-gold__arrow { display: inline-block; transition: transform 220ms cubic-bezier(0.22, 1, 0.36, 1); } .ds-btn-ghost-gold:hover .ds-btn-ghost-gold__arrow { transform: translateX(3px); } @media (max-width: 380px) { .ds-btn-ghost-gold__text { display: none; } .ds-btn-ghost-gold { padding: 7px 12px; } }"
+    },
+    {
+      "name": "Display Headline with Accent",
+      "kind": "custom",
+      "refersTo": "display-xl",
+      "description": "Headline cerimonial em Fraunces display-xl, com uma palavra acentuada em urucum. Padrão do hero da página. Demonstra a Regra do Uma-por-Momento: uma única palavra recebe acento, todo o resto fica em papel-cream.",
+      "html": "<h1 class=\"ds-display-xl\">Construímos a camada de IA que sua área de negócio precisa. Sem disputar o <span class=\"ds-accent-urucum\">fôlego</span> da sua TI.</h1>",
+      "css": ".ds-display-xl { font-family: 'Fraunces', Georgia, serif; font-weight: 700; font-variation-settings: 'opsz' 144, 'SOFT' 30; letter-spacing: -0.022em; font-size: clamp(48px, 7.6vw, 112px); line-height: 1.04; color: var(--ink, #F1ECE0); margin: 0; max-width: 20ch; } .ds-accent-urucum { color: var(--urucum, #C25E3A); }"
+    }
+  ],
+  "narrative": {
+    "northStar": "O Caderno de Cultura",
+    "overview": "Marina abre o site no celular, em 4 minutos, entre uma reunião e outra. Já viu mil sites de SaaS de IA. Nunca viu um que parecesse um caderno de cultura. Este parece. Tipografia editorial pesada (Fraunces ceremonial, Inter Tight de trabalho), hierarquia em escala generosa, respiração calibrada entre seções. A página se lê como artigo longo de revista, não como pitch de produto.\n\nA base é noturna: a tela inteira drenched em azul-nanquim profundo (#0E1A26), com a tinta cor de papel (#F1ECE0) como ink. Não é dark mode utilitário, é nanquim chinês sobre papel-creme, invertido. As outras cores nomeadas (verde-musgo, urucum, ouro, azul-céu, verde-folha) aparecem uma por vez por momento, marcando uma única palavra-chave, nunca decorando.\n\nO sistema rejeita explicitamente: SaaS-template roxo-azul-degradê, hero-metric template, card-grid de 'nossos serviços' com 4 cards iguais com ícone, gradientes coloridos em headline, stock photography, glassmorphism decorativo, animação que infla ou puxa atenção, 'nós, na Iarandu, acreditamos que…'.",
+    "keyCharacteristics": [
+      "Noturno drenched. Fundo #0E1A26 em toda a página. Variação de profundidade vem da matiz da superfície (surface-1..4), não de sombras.",
+      "Tipografia editorial cerimonial. Fraunces 700 com opsz 144 e SOFT 30 nos manifestos; Inter Tight 400/500/600 no trabalho diário.",
+      "Uma cor por momento. Em qualquer seção, exatamente uma palavra recebe acento (urucum, azul-céu, verde-folha ou ouro). A escassez é a força.",
+      "Cantos crispos. border-radius: 0 em praticamente tudo. Exceção: 2px no CTA primário; 999px em status pills.",
+      "Movimento contemplativo. Curva única cubic-bezier(0.22, 1, 0.36, 1). Reveals de 800 a 1100ms, executados uma vez ao entrar em viewport, jamais em loop.",
+      "Curvas vivas no fundo. SVGs com stroke-dashoffset desenham rios e curvas logarítmicas ao revelar seções narrativas: único momento de presença não-textual."
+    ],
+    "rules": [
+      { "name": "A Regra do Uma-por-Momento", "body": "Em qualquer seção, exatamente uma palavra recebe acento colorido (urucum, azul-céu, verde-folha ou ouro). Duas marcações na mesma seção significa que uma está errada. A escassez é a força. Vale para componentes decorativos também: nada pinta sem motivo. Esta regra estende a 'regra do urucum' original para os três acentos auxiliares.", "section": "colors" },
+      { "name": "A Regra do Logo de Cliente", "body": "Logos de clientes em grade aparecem em verde-musgo ou neutro frio (#7A8E9B), nunca em sua cor original. A harmonia editorial prevalece sobre o reconhecimento exato da marca alheia. Substitui o anti-padrão de 'wall of grayed logos' por 'wall of inked logos'.", "section": "colors" },
+      { "name": "A Regra do Nanquim", "body": "Todos os fundos primários ficam dentro da família azul-nanquim. Variação cromática entre seções é prerrogativa do verde-musgo-deep (apenas no rodapé) e dos acentos textuais. Não introduzir um quinto fundo.", "section": "colors" },
+      { "name": "A Regra do Fraunces Cerimonial", "body": "Fraunces nunca acompanha Fraunces diretamente. Entre dois blocos display, sempre quebra com label (uppercase, tracking), corpo, ou pelo menos 56px de respiração. Se Fraunces aparece em todo título do site, perde a função cerimonial.", "section": "typography" },
+      { "name": "A Regra do max-width", "body": "Corpo cap em 64ch (.measure); blocos curtos em 56ch (.measure-tight); manifestos em 38ch (.measure-manifesto). Linhas mais longas atrapalham Marina no celular; linhas mais curtas matam o ritmo do manifesto.", "section": "typography" },
+      { "name": "A Regra da Letra-i Sem Pingo", "body": "No logo, o ı é dotless (i sem pingo); o pingo é substituído por um círculo urucum sobreposto, alinhado oticamente à mesma altura do 'i' da palavra. Isto é assinatura da marca: não usar a letra i com pingo padrão dentro do wordmark.", "section": "typography" },
+      { "name": "A Regra do Plano-Por-Padrão", "body": "Sombras não aparecem por estética. Surgem apenas em resposta a um afeto óptico físico (blur do sticky header). Tudo mais é plano. Se você está prestes a adicionar box-shadow em um card, primeiro verifique se o layering tonal e uma borda de 1px não resolvem.", "section": "elevation" },
+      { "name": "A Regra dos Quatro Andares", "body": "A profundidade do sistema é discreta: quatro tons, nada mais. Não introduzir uma quinta superfície ('surface-5') para criar contraste; em vez disso, repetir alguma das quatro existentes.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do usar var(--azul-nanquim-deep) como fundo padrão de toda a página. Todo o resto é variação tonal dentro da família nanquim, ou verde-musgo-deep só no rodapé.",
+      "Do usar Fraunces 700 com font-variation-settings: 'opsz' 144, 'SOFT' 30 em todo manifesto e display. A configuração de eixos é parte da identidade.",
+      "Do usar exatamente uma palavra acentuada por seção (urucum, ouro, verde-folha ou azul-céu). Marcar duas é erro.",
+      "Do manter border-radius: 0 em quase tudo. Exceções: CTA primário (2px), status pills (999px).",
+      "Do usar cubic-bezier(0.22, 1, 0.36, 1) como curva única de motion. Reveals em 800 a 1100ms, executados uma vez ao entrar em viewport, jamais em loop.",
+      "Do usar tonal layering (surface-1..4) para profundidade. Cards e seções diferem por luminância da mesma matiz, não por sombra.",
+      "Do preferir SVG inline com stroke-dashoffset quando o sistema pedir presença visual além do texto. Curvas logarítmicas e rios desenham-se uma vez ao revelar; ficam.",
+      "Do truncar o sticky CTA em telas <380px para apenas a seta. O texto colapsa, a função permanece.",
+      "Do respeitar prefers-reduced-motion: reveals viram opacity puro, role-cloud para de driftar, logo aparece pronto, curvas aparecem já desenhadas.",
+      "Do servir Fraunces e Inter Tight com display=swap e preload da style sheet. JS shipped < 100KB. LCP < 1.5s em 4G. Marina abre no celular."
+    ],
+    "donts": [
+      "Don't introduzir gradiente colorido em headline, em fundo, ou em qualquer componente decorativo. Banido pelo PRODUCT.md.",
+      "Don't usar hero-metric template (número gigante + 3 stats + label). SaaS cliché. Banido.",
+      "Don't desenhar card-grid de 'nossos serviços' com 4 cards iguais com ícone. Cada bloco tem altura e papel próprios.",
+      "Don't usar side-stripe colorido em alerts, cards ou callouts. Banido pela impeccable e pelo PRODUCT.md. Separadores são 1px full-border, nunca barras verticais coloridas.",
+      "Don't usar glassmorphism decorativo. Único blur permitido: sticky header (afeto físico de profundidade, não estética).",
+      "Don't usar stock photography. Período. Se imagem fotográfica entrar em v2, segue critérios PRODUCT.md (escala, silêncio, respiração, autoria: Salgado, Araquém Alcântara, INPA, Goeldi).",
+      "Don't repetir Fraunces em todo título. Fraunces é cerimonial; se aparece em demasia, perde a função.",
+      "Don't misturar modo Herzog (narrativa) e modo Linear (diagrama) na mesma seção. Banido pelo PRODUCT.md. Cada seção declara seu modo.",
+      "Don't animar em loop. Animação toca uma vez ao revelar, fica. Background gradient mesh animado, vídeo de planeta Terra, cursor-following blobs: todos proibidos.",
+      "Don't usar emojis em material institucional. Marina não acredita em material que grita.",
+      "Don't escrever as palavras-bingo: jornada, transformação digital, potencializar, alavancar, unleash, empower, framework proprietário, metodologia exclusiva, ecossistema, sinergia, end-to-end, holístico, disruptivo, próximo nível, world-class, revolucionário, redefinir, reimaginar.",
+      "Don't usar 'Nós, na Iarandu, acreditamos que…'. Cortar. Ir direto para o verbo: Construímos, Modernizamos, Treinamos.",
+      "Don't usar travessão em copy (—) nem --. Vírgula, ponto, dois-pontos, ponto-e-vírgula ou parênteses no lugar.",
+      "Don't servir cookie banner. Sem analytics em v1, sem banner.",
+      "Don't usar logos de clientes em sua cor original numa grade. Pinta em verde-musgo ou neutro frio. Harmonia editorial prevalece."
+    ]
+  }
+}

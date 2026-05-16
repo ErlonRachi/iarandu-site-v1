@@ -1,0 +1,34 @@
+---
+// Section 10 (v4) — surface-4 (deepest). Keyword: "Amazonas" (urucum).
+// Diff vs v3 (mailto polish): mailto CTA carries prefilled subject + body so
+// Marina, on the phone, doesn't face a blank canvas in Gmail. Both the primary
+// button and the "Ou direto" fallback share the same scaffold.
+const MAILTO_TO = "we@iarandu.tech";
+const MAILTO_SUBJECT = "Conversa com a Iarandu";
+const MAILTO_BODY = `Sou [cargo] em [empresa].
+
+Quero conversar sobre:
+`;
+const mailtoHref = `mailto:${MAILTO_TO}?subject=${encodeURIComponent(MAILTO_SUBJECT)}&body=${encodeURIComponent(MAILTO_BODY)}`;
+---
+
+<section id="vamos" class="surface-4 section-pad" aria-labelledby="fechamento-title">
+  <div class="container-narrow">
+    <h2 id="fechamento-title" class="display-xl measure-manifesto" data-words>
+      Somos como o Rio <span class="accent-urucum">Amazonas</span> correndo pro mar.
+    </h2>
+    <p class="reveal mt-[32px] md:mt-[48px] body-lg measure-tight" style="transition-delay: 200ms;">
+      Fale com a gente. Vamos ter uma conversa real sobre como resolver seus problemas.
+    </p>
+
+    <div class="reveal mt-[40px] md:mt-[56px]" style="transition-delay: 320ms;">
+      <a href={mailtoHref} class="cta-primary">
+        mande uma mensagem
+      </a>
+    </div>
+
+    <p class="reveal mt-[28px] body-sm" style="transition-delay: 420ms;">
+      Ou direto: <a class="link-editorial" href={mailtoHref}>{MAILTO_TO}</a>
+    </p>
+  </div>
+</section>

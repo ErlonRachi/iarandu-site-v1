@@ -1,0 +1,19 @@
+/* Iter4 route — same compact spacing as iter.css, plus polish fixes:
+ *   - scroll-padding-top aligned to sticky height (56 ≈ 50 sticky + 6 visual)
+ *   - margem comprimida em cases pra mobile (override do mt utility)
+ */
+
+.iter4 .section-pad        { padding-block: 80px; }
+.iter4 .section-pad-loose  { padding-block: 96px; }
+.iter4 .section-pad-tight  { padding-block: 56px; }
+
+@media (min-width: 768px) {
+  .iter4 .section-pad        { padding-block: 128px; }
+  .iter4 .section-pad-loose  { padding-block: 152px; }
+  .iter4 .section-pad-tight  { padding-block: 80px; }
+}
+
+/* Scroll-padding aligned to sticky-header total visual height (was 64; sticky is 50). */
+html:has(.iter4) {
+  scroll-padding-top: 56px;
+}

@@ -1,0 +1,213 @@
+---
+// Section 5 (v5) — surface-2. Keyword: "60 dias" (azul).
+// Diff vs v4:
+//   - case-cta now uses .cta-primary (urucum button) instead of gold underlined
+//     link. Matches Hero and Fechamento CTAs visually — same affordance.
+//   - copy "descreva o seu problema" → "nos conte seu problema".
+const cases = [
+  {
+    descritor: "Software house brasileira",
+    setor: "ERP empresarial · líder de mercado nacional",
+    porte: ["+12.000 funcionários", "+70.000 clientes corporativos", "Capital aberto na B3"],
+    antes: "Times de produto reescrevendo a mesma especificação 3 vezes, sem padrão de qualidade.",
+    depois: "IA classifica e ordena 90% das especificações antes da revisão humana.",
+    status: { key: "andamento", label: "em andamento" },
+    tone: "destaque",
+  },
+  {
+    descritor: "Agência reguladora federal",
+    setor: "Estado brasileiro · setor crítico",
+    porte: ["+3.000 empresas reguladas", "Cobertura nacional", "Stack tecnológico com +15 anos"],
+    antes: "Licenciamento e fiscalização presos a um sistema legado, cobrindo todo o território nacional.",
+    depois: "Diagnóstico completo entregue. Plano de modernização, nuvem e IA pronto para execução.",
+    status: { key: "entregue", label: "plano entregue" },
+    tone: "padrao",
+  },
+  {
+    descritor: "HR tech em hipercrescimento",
+    setor: "Trabalho executivo fracionado · LATAM",
+    porte: ["Top 3 do mercado LATAM", "+4.000 clientes", "Crescimento projetado de 20×"],
+    antes: "Operação manual não acompanhava o ritmo de 20× e a adoção de IA acontecia em ilhas separadas.",
+    depois: "Camada única de governança e IA, padrão interno, time inteiro no mesmo trilho.",
+    status: { key: "andamento", label: "em implantação" },
+    tone: "padrao",
+  },
+];
+---
+
+<section class="surface-2 section-pad" aria-labelledby="cases-title">
+  <div class="container-editorial">
+    <h2 id="cases-title" class="h2 reveal measure">
+      Nossos primeiros clientes, desenvolvimento sob NDA.
+    </h2>
+    <p class="reveal mt-[16px] md:mt-[20px] body-lg measure-tight" style="transition-delay: 120ms;">
+      Desenvolvimentos personalizados para as respectivas áreas de negócio. Resultados nos primeiros <span class="accent-azul">60 dias</span>.
+    </p>
+
+    <ul class="case-grid mt-[48px] md:mt-[64px]">
+      {
+        cases.map((c, i) => (
+          <li
+            class="reveal case-row"
+            style={`transition-delay: ${i * 120}ms`}
+          >
+            <div class="case-cell case-identity">
+              <h3 class="h3">{c.descritor}</h3>
+              <p class="case-eyebrow mt-[8px]">{c.setor}</p>
+              <ul class="case-porte mt-[20px] space-y-[6px] body-sm">
+                {c.porte.map((p) => <li>· {p}</li>)}
+              </ul>
+            </div>
+            <div class="case-cell case-problem">
+              <p class="case-eyebrow">antes</p>
+              <p class="mt-[10px] body">{c.antes}</p>
+            </div>
+            <div class="case-cell case-decision">
+              <p class="case-eyebrow">depois</p>
+              <p class="mt-[10px] body">{c.depois}</p>
+            </div>
+            <div class="case-cell case-status">
+              <p class="case-eyebrow">status</p>
+              <span class="case-pill mt-[10px]" data-status={c.status.key}>
+                {c.status.label}
+              </span>
+            </div>
+          </li>
+        ))
+      }
+    </ul>
+
+    <div class="reveal case-cta-block mt-[64px] md:mt-[88px]">
+      <h3 class="display-sm">Reconhece o padrão no seu contexto?</h3>
+      <a href="#vamos" class="cta-primary">
+        nos conte seu problema
+      </a>
+    </div>
+  </div>
+</section>
+
+<style>
+  .case-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background: var(--linha-azul-strong);
+  }
+  .case-row {
+    display: grid;
+    grid-template-columns: 1fr;
+    background: var(--azul-card);
+    padding: 24px 20px;
+    gap: 20px;
+  }
+  /* Mobile: hide porte bullets — Marina is scanning, not auditing */
+  .case-porte { display: none; }
+  @media (min-width: 900px) {
+    .case-row {
+      grid-template-columns: 1.6fr 1.4fr 1.4fr 0.8fr;
+      padding: 36px 32px;
+      gap: 0;
+    }
+    .case-cell + .case-cell {
+      border-left: 1px solid var(--linha-azul-strong);
+      padding-left: 28px;
+      margin-left: 28px;
+    }
+    .case-porte { display: block; }
+  }
+  .case-eyebrow {
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-muted);
+  }
+  .case-status {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+  }
+  @media (min-width: 900px) {
+    .case-status {
+      flex-direction: column;
+      align-items: flex-end;
+      text-align: right;
+      gap: 0;
+    }
+  }
+  .case-pill {
+    display: inline-block;
+    padding: 5px 14px;
+    border-radius: 999px;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    line-height: 1.4;
+    margin-top: 0;
+  }
+  @media (min-width: 900px) {
+    .case-pill { margin-top: 10px; }
+  }
+  .case-pill[data-status="andamento"] {
+    color: var(--ouro);
+    background: rgba(200, 169, 110, 0.10);
+    border: 1px solid rgba(200, 169, 110, 0.32);
+  }
+  .case-pill[data-status="entregue"] {
+    color: var(--verde-folha);
+    background: rgba(143, 190, 146, 0.10);
+    border: 1px solid rgba(143, 190, 146, 0.32);
+  }
+
+  .case-cta-block {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    align-items: flex-start;
+    padding-top: 40px;
+    border-top: 1px solid var(--linha-papel);
+  }
+  @media (min-width: 768px) {
+    .case-cta-block {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      gap: 56px;
+    }
+  }
+  .case-cta-link {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 10px;
+    color: var(--ouro);
+    text-decoration: none;
+    font-size: clamp(17px, 1.5vw, 21px);
+    font-weight: 500;
+    letter-spacing: -0.005em;
+    border-bottom: 1px solid rgba(200, 169, 110, 0.5);
+    padding-bottom: 4px;
+    white-space: nowrap;
+    transition: color 220ms var(--ease), border-color 220ms var(--ease);
+  }
+  .case-cta-link:hover,
+  .case-cta-link:focus-visible {
+    color: var(--ouro-fresh);
+    border-color: var(--ouro-fresh);
+  }
+  .case-cta-arrow {
+    display: inline-block;
+    transition: transform 220ms var(--ease);
+  }
+  .case-cta-link:hover .case-cta-arrow,
+  .case-cta-link:focus-visible .case-cta-arrow {
+    transform: translateX(5px);
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .case-cta-link,
+    .case-cta-arrow { transition: none; }
+  }
+</style>

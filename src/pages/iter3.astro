@@ -1,0 +1,35 @@
+---
+// /iter3 — snapshot lock of v3 (current state at critique time).
+// Uses .v3.astro siblings exclusively for the components changed in v2/v3.
+// Production / and the working /iter (= scratch) remain untouched.
+import LayoutIter from "../layouts/LayoutIter.astro";
+import Hero from "../components/sections/Hero.v3.astro";
+import Tese from "../components/sections/Tese.astro";
+import OQueFazemos from "../components/sections/OQueFazemos.astro";
+import ParaQuem from "../components/sections/ParaQuem.v3.astro";
+import Cases from "../components/sections/Cases.v3.astro";
+import Trilha from "../components/sections/Trilha.astro";
+import PosicaoTI from "../components/sections/PosicaoTI.v3.astro";
+import Socios from "../components/sections/Socios.astro";
+import Arandu from "../components/sections/Arandu.v3.astro";
+import Fechamento from "../components/sections/Fechamento.v3.astro";
+import Footer from "../components/sections/Footer.v3.astro";
+---
+
+<LayoutIter
+  title="Iarandu — v3 (snapshot)"
+>
+  <main>
+    <Hero />
+    <Tese />
+    <OQueFazemos />
+    <ParaQuem />
+    <Cases />
+    <Trilha />
+    <PosicaoTI />
+    <Socios />
+    <Arandu />
+    <Fechamento />
+  </main>
+  <Footer />
+</LayoutIter>

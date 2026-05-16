@@ -1,0 +1,25 @@
+---
+// Footer (v2) — surface-3 (warm).
+// Diff vs prod: LinkedIn link removed (account not live yet).
+import Logo from "../Logo.astro";
+---
+
+<footer class="surface-3" style="border-top: 1px solid var(--linha-papel);">
+  <div class="container-editorial py-[48px] md:py-[64px] grid grid-cols-1 md:grid-cols-3 gap-[24px] items-center">
+    <p class="body-sm">São Paulo · Milano</p>
+
+    <div class="flex justify-start md:justify-center" style="color: var(--ink);">
+      <a href="#topo" aria-label="Voltar ao topo">
+        <Logo variant="mark" width={32} />
+      </a>
+    </div>
+
+    <div class="flex flex-wrap gap-x-[24px] body-sm md:justify-end">
+      <a class="link-editorial" href="mailto:we@iarandu.tech">we@iarandu.tech</a>
+    </div>
+  </div>
+
+  <div class="container-editorial pb-[24px]">
+    <p class="body-sm" style="opacity: 0.5;">© 2026 Iarandu.</p>
+  </div>
+</footer>

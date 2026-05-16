@@ -1,0 +1,13 @@
+/* Iter route — compact spacing variant. Scoped to .iter wrapper.
+ * Drops desktop section padding ~30-40% vs production to remove perceived
+ * "scroll fatigue" without breaking the editorial rhythm. */
+
+.iter .section-pad        { padding-block: 80px; }
+.iter .section-pad-loose  { padding-block: 96px; }
+.iter .section-pad-tight  { padding-block: 56px; }
+
+@media (min-width: 768px) {
+  .iter .section-pad        { padding-block: 128px; }
+  .iter .section-pad-loose  { padding-block: 152px; }
+  .iter .section-pad-tight  { padding-block: 80px; }
+}

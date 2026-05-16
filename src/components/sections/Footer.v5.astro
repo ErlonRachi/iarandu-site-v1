@@ -1,0 +1,33 @@
+---
+// Footer (v5) — surface-3 (warm).
+// Diff vs v4 (P0 fix): mailto body no longer uses [bracket] tokens.
+// Same scaffold as Fechamento.v5.
+import Logo from "../Logo.astro";
+
+const MAILTO_TO = "we@iarandu.tech";
+const MAILTO_SUBJECT = "Conversa com a Iarandu";
+const MAILTO_BODY = `Olá,
+
+`;
+const mailtoHref = `mailto:${MAILTO_TO}?subject=${encodeURIComponent(MAILTO_SUBJECT)}&body=${encodeURIComponent(MAILTO_BODY)}`;
+---
+
+<footer class="surface-3" style="border-top: 1px solid var(--linha-papel);">
+  <div class="container-editorial py-[48px] md:py-[64px] grid grid-cols-1 md:grid-cols-3 gap-[24px] items-center">
+    <p class="body-sm">São Paulo · Milano</p>
+
+    <div class="flex justify-start md:justify-center" style="color: var(--ink);">
+      <a href="#topo" aria-label="Voltar ao topo">
+        <Logo variant="mark" width={32} />
+      </a>
+    </div>
+
+    <div class="flex flex-wrap gap-x-[24px] body-sm md:justify-end">
+      <a class="link-editorial" href={mailtoHref}>{MAILTO_TO}</a>
+    </div>
+  </div>
+
+  <div class="container-editorial pb-[24px]">
+    <p class="body-sm" style="opacity: 0.5;">© 2026 Iarandu.</p>
+  </div>
+</footer>

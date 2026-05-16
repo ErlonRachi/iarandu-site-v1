@@ -1,0 +1,61 @@
+---
+// Section 4 (v2) — surface-1. Keyword: "IA" (urucum).
+// Diff vs prod:
+//   - new headline: "Com IA, a forma como você e sua empresa trabalham, muda."
+//   - perfis cards + áreas list unchanged
+const perfis = [
+  {
+    perfil: "Empresa em crescimento rápido",
+    descricao:
+      "Time pequeno, ambição grande, TI sem fôlego. Precisa de uma banda extra de produção em IA, sem virar projeto interno.",
+  },
+  {
+    perfil: "Empresa de TI madura",
+    descricao:
+      "Padrões estabelecidos, pipelines de dados sólidos, área de negócio parada na fila. Entramos como parceiros táticos da TI.",
+  },
+  {
+    perfil: "Empresa com sistema legado",
+    descricao:
+      "ERP de 15 anos, planilhas de reconciliação, shadow IT por toda parte. Diagnóstico de maturidade, plano de modernização, camada de IA por cima.",
+  },
+];
+
+const areas = [
+  "Operações",
+  "Comercial",
+  "Recursos Humanos",
+  "Financeiro",
+  "Implementação",
+  "Fiscalização",
+  "Atendimento",
+];
+---
+
+<section class="surface-1 section-pad" aria-labelledby="paraquem-title">
+  <div class="container-editorial">
+    <h2 id="paraquem-title" class="h2 reveal measure">
+      Com <span class="accent-urucum">IA</span>, a forma como você e sua empresa trabalham, muda.
+    </h2>
+
+    <div class="mt-[48px] md:mt-[64px] grid grid-cols-1 md:grid-cols-3 gap-[40px] md:gap-[56px]">
+      {
+        perfis.map((p, i) => (
+          <article class="reveal" style={`transition-delay: ${i * 120}ms`}>
+            <h3 class="h3">{p.perfil}</h3>
+            <p class="mt-[16px] body">{p.descricao}</p>
+          </article>
+        ))
+      }
+    </div>
+
+    <hr class="divider mt-[64px] md:mt-[80px]" />
+
+    <div class="mt-[40px] grid grid-cols-1 md:grid-cols-[auto_1fr] gap-[16px] md:gap-[40px] items-baseline">
+      <p class="body-sm" style="letter-spacing: 0.04em; text-transform: uppercase; white-space: nowrap;">a Iarandu é para sua área</p>
+      <ul class="flex flex-wrap md:flex-nowrap gap-x-[20px] gap-y-[8px] body" style="overflow-x: auto;">
+        {areas.map((a) => <li style="white-space: nowrap;">{a}</li>)}
+      </ul>
+    </div>
+  </div>
+</section>

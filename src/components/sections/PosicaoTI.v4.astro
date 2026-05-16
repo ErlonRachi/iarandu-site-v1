@@ -1,0 +1,48 @@
+---
+// Section 7 (v4) — surface-2. Keyword: "banda" (verde).
+// Diff vs v3: single-word accent now respects "uma cor por momento".
+// "banda" rimes with ParaQuem ("banda extra de produção") — internal echo
+// that ties the two sections.
+const pilares = [
+  {
+    titulo: "Compliance",
+    descricao: "Trabalhamos dentro do que a TI já definiu. Políticas de dados, perímetros, auditoria. Sem zonas cinza.",
+  },
+  {
+    titulo: "Segurança",
+    descricao: "Gestão de identidade, secrets em vault, log estruturado, isolamento de ambiente. Sem credencial em planilha, sem chave em e-mail.",
+  },
+  {
+    titulo: "Integração total",
+    descricao: "Padrões da TI, pipelines da TI, observabilidade da TI. Entregamos código e arquitetura que o time da casa mantém.",
+  },
+];
+---
+
+<section class="surface-2 section-pad-loose" aria-labelledby="posicao-title">
+  <div class="container-narrow">
+    <h2 id="posicao-title" class="display-lg measure-manifesto" data-words>
+      Somos aliados táticos da área de Tecnologia. A <span class="accent-verde">banda</span> extra de entrega que o CTO gostaria de ter para atender suas demandas.
+    </h2>
+
+    <p class="reveal mt-[40px] md:mt-[56px] body-lg measure-tight" style="transition-delay: 200ms;">
+      Saímos do orçamento da área de negócio, mas trabalhamos para a TI, com os padrões da TI. Não competimos com o time da casa, destravamos.
+    </p>
+  </div>
+
+  <div class="container-editorial mt-[64px] md:mt-[96px]">
+    <ul class="grid grid-cols-1 md:grid-cols-3 gap-[40px] md:gap-[56px]">
+      {
+        pilares.map((p, i) => (
+          <li
+            class="reveal pt-[24px] rule"
+            style={`transition-delay: ${i * 120}ms`}
+          >
+            <h3 class="h3">{p.titulo}</h3>
+            <p class="mt-[16px] body">{p.descricao}</p>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</section>

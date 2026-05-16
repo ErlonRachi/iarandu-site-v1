@@ -1,0 +1,33 @@
+---
+// /iter — candidate v2 of the landing.
+// Wraps the page in .iter (tighter section padding from iter.css) and swaps
+// four sections for their .v2.astro siblings. Original / route untouched.
+import LayoutIter from "../layouts/LayoutIter.astro";
+import Hero from "../components/sections/Hero.v2.astro";
+import Tese from "../components/sections/Tese.astro";
+import OQueFazemos from "../components/sections/OQueFazemos.astro";
+import ParaQuem from "../components/sections/ParaQuem.v2.astro";
+import Cases from "../components/sections/Cases.v2.astro";
+import Trilha from "../components/sections/Trilha.astro";
+import PosicaoTI from "../components/sections/PosicaoTI.v2.astro";
+import Socios from "../components/sections/Socios.astro";
+import Arandu from "../components/sections/Arandu.v2.astro";
+import Fechamento from "../components/sections/Fechamento.v2.astro";
+import Footer from "../components/sections/Footer.v2.astro";
+---
+
+<LayoutIter>
+  <main>
+    <Hero />
+    <Tese />
+    <OQueFazemos />
+    <ParaQuem />
+    <Cases />
+    <Trilha />
+    <PosicaoTI />
+    <Socios />
+    <Arandu />
+    <Fechamento />
+  </main>
+  <Footer />
+</LayoutIter>
