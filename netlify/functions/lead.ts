@@ -152,6 +152,8 @@ async function createClickUpTask(
     status: "lead",
     assignees: [OWNER_EDUARDO_ID],
     tags: ["business-development", "inbound-site"],
+    due_date: Date.now(),
+    due_date_time: false,
     custom_fields: [
       { id: CUSTOM_FIELD_IDS.tipoProblema, value: tipo.optionId },
       { id: CUSTOM_FIELD_IDS.emailContato, value: payload.email },
