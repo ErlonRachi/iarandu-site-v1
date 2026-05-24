@@ -44,6 +44,10 @@ const TIPO_PROBLEMA_OPTIONS = {
     optionId: "3c0d66d3-c7ca-4b58-a8a4-51ef0ce70195",
     label: "Governança e compliance em IA",
   },
+  "outra-coisa": {
+    optionId: "43ab3d7e-a51a-4630-bf0d-34e90b12cb2e",
+    label: "Outra Coisa",
+  },
 } as const;
 
 type TipoProblemaSlug = keyof typeof TIPO_PROBLEMA_OPTIONS;

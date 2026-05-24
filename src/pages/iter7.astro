@@ -1,0 +1,33 @@
+---
+// /iter7 — v7 preview: swap Fechamento.v5 (mailto-only) → Fechamento.v6 (form
+// roteado por tipo de problema + POST /api/lead). Resto idêntico a iter6.
+// Index.astro intocado até promoção explícita (PR3).
+import LayoutIter5 from "../layouts/LayoutIter5.astro";
+import Hero from "../components/sections/Hero.v4.astro";
+import Tese from "../components/sections/Tese.astro";
+import OQueFazemos from "../components/sections/OQueFazemos.astro";
+import ParaQuem from "../components/sections/ParaQuem.v4.astro";
+import Cases from "../components/sections/Cases.v5.astro";
+import PosicaoTI from "../components/sections/PosicaoTI.v5.astro";
+import Socios from "../components/sections/Socios.v5.astro";
+import Arandu from "../components/sections/Arandu.v4.astro";
+import Fechamento from "../components/sections/Fechamento.v6.astro";
+import Footer from "../components/sections/Footer.v5.astro";
+---
+
+<LayoutIter5
+  title="Iarandu — v7 (Fechamento.v6 formulário roteado)"
+>
+  <main>
+    <Hero />
+    <Tese />
+    <OQueFazemos />
+    <ParaQuem />
+    <Cases />
+    <PosicaoTI />
+    <Socios />
+    <Arandu />
+    <Fechamento />
+  </main>
+  <Footer />
+</LayoutIter5>
