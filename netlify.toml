@@ -1,0 +1,13 @@
+# Iarandu site — Netlify config
+# Minimal: declares functions dir + aliases /api/lead → /.netlify/functions/lead
+# Does NOT override [build] settings (managed in Netlify dashboard).
+
+[functions]
+  directory = "netlify/functions"
+  node_bundler = "esbuild"
+
+[[redirects]]
+  from = "/api/lead"
+  to = "/.netlify/functions/lead"
+  status = 200
+  force = true
